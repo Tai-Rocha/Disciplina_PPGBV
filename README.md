@@ -1,4 +1,4 @@
-## Ementa da disciplina oferecida ao Programa de Pós-Graduação em Biologia vegetal. PPGBV 940 Tópicos Avançados em Biologia Vegetal IV: “Introdução à teoria e prática de Modelagem de Nicho Ecológico”
+### Conteúdo da disciplina oferecida ao Programa de Pós-Graduação em Biologia vegetal. PPGBV 940 Tópicos Avançados em Biologia Vegetal IV: “Introdução à teoria e prática de Modelagem de Nicho Ecológico”
 
 #### Carga horária: 60 h
 #### N de créditos: 4 créditos
@@ -10,9 +10,9 @@
 #### Pré-requisito ou recomendação: Instalar no computador o R, Rstudio e QGIS.
 
 
-##### Nesta disciplina abordaremos: Teoria do Nicho e conceitos; Diagrama de BAM; Dualidade de Hutchinson; diferentes abordagens de modelos de nicho ecológico (correlativo, mecanicista e híbrido); limitações e aplicabilidades; etapas da Modelagem de Nicho Ecológico Correlativa (ENM): camadas ambientais (preditores), registros de ocorrência, limpeza de dados e remoção de viés (filtro geográfico e ambiental), (pseudo)ausência, algoritmos, validação dos modelos, premissas da ENM, projeção no espaço geográfico e no tempo (extrapolação), modelo consenso, transferabilidade; análise de dados e interpretação dos modelos. Conceitos e práticas suporte: introdução ao ambiente R; reprodutibilidade, organização de projetos e boas práticas; breve introdução sobre Sistema de Informação Geográfica (SIG); breve introdução sobre Redação Científica.
+### Nesta disciplina abordaremos: Teoria do Nicho e conceitos; Diagrama de BAM; Dualidade de Hutchinson; diferentes abordagens de modelos de nicho ecológico (correlativo, mecanicista e híbrido); limitações e aplicabilidades; etapas da Modelagem de Nicho Ecológico Correlativa (ENM): camadas ambientais (preditores), registros de ocorrência, limpeza de dados e remoção de viés (filtro geográfico e ambiental), (pseudo)ausência, algoritmos, validação dos modelos, premissas da ENM, projeção no espaço geográfico e no tempo (extrapolação), modelo consenso, transferabilidade; análise de dados e interpretação dos modelos. Conceitos e práticas suporte: introdução ao ambiente R; reprodutibilidade, organização de projetos e boas práticas; breve introdução sobre Sistema de Informação Geográfica (SIG); breve introdução sobre Redação Científica.
 
-##### Cronograma 
+### Cronograma 
 
 | Dia 1            |                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                    |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
@@ -45,3 +45,27 @@
 | Dia10            |                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                    |
 | 24/99:00-12:00   | Aula prática: Apresentação dos resultados                                                                                                                                                                                                                                                                                                                                                                                     | Luara Tourinho, Tainá  Rocha , Kátia Pôrto                           |
 | 24/914:00-17:00  | Aula prática: Apresentação dos resultados e encerramento                                                                                                                                                                                                                                                                                                                                                                      | Luara Tourinho, Tainá  Rocha, Kátia Pôrto                            |
+
+
+### Avaliação
+#### A avaliação: apresentação oral (9:00 – 17:00, 24/09) e trabalho escrito (resumo expandido do projeto)
+(23:59, 24/09).
+
+
+### BIBLIOGRAFIA BÁSICA:
+
+GIANNINI, T. C., SIQUEIRA, M. F., ACOSTA, A. L., BARRETO, F. C., SARAIVA, A. M., &amp; ALVES-
+DOS-SANTOS, I. (2012). DESAFIOS ATUAIS DA MODELAGEM PREDITIVA DE DISTRIBUIÇÃO
+DE ESPÉCIES. RODRIGUÉSIA, 63, 733-749.
+PETERSON, A. T.; SOBERÓN, J.; PEARSON, R. G.; ET AL. ECOLOGICAL NICHES AND
+GEOGRAPHIC DISTRIBUTIONS. PRINCETON: PRINCETON UNIVERSITY PRESS, 2011.QIAO, H.,
+SOBERÓN, J., &amp;
+
+PETERSON, A. T. (2015). NO SILVER BULLETS IN CORRELATIVE ECOLOGICAL NICHE
+MODELLING: INSIGHTS FROM TESTING AMONG MANY POTENTIAL ALGORITHMS FOR
+NICHE ESTIMATION. METHODS IN ECOLOGY AND EVOLUTION, 6(10), 1126-1136.
+ROBERT J. H., &amp; ELITH, J. (2021). SPECIES DISTRIBUTION MODELING. AVAILABLE AT:
+HTTPS://RSPATIAL.ORG/RASTER/SDM/ &lt;ACCESSED: JULY 2021&gt;
+SOBERÓN, J., &amp; NAKAMURA, M. (2009). NICHES AND DISTRIBUTIONAL AREAS: CONCEPTS,
+METHODS, AND ASSUMPTIONS. PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES,
+106(SUPPLEMENT 2), 19644-19650.
