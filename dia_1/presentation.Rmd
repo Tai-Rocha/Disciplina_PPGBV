@@ -1,0 +1,63 @@
+---
+title: "Disciplina: Introdução à teoria e prática de Modelagem de Nicho Ecológico"
+subtitle: "Dia 1: Apresentação"
+author: "Luara Tourinho e  Tainá Rocha"
+date: "2019/06/17 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: middle, center
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include = FALSE}
+library(xaringanthemer)
+mono_light(
+  base_color = "#23395b", white_color = "white",
+  header_font_google = google_font("Source Sans Pro"),
+  text_font_google   = google_font("Source Sans Pro", "300", "300i"),
+  code_font_google   = google_font("Ubuntu Mono"), text_font_size = "22px"
+)
+```
+
+# Sobre esta disciplina
+
+
+---
+# Apresentação 
+
++ __Luara Tourinho __
+Bióloga pela Universidade Federal da Bahia, mestre e doutora em ecologia pela
+UFRJ.
+
++ __Tainá Rocha__ 
+Bióloga, metstra em biologiam ambiental pela Universidade Fedral do Pará, doutora em zoologia pelo MPEG.
+
+---
+# Objetivos da disciplina
+
+1. Entender os conceitos de nicho e elementos relacionados a este que são fundamentais para o uso acertivo dos modelos de nicho ecológicos (MNE|ENM) e de distribuição potencial de espécies (MDE|SDM).
+
+--
+
+2. Entender os tipo de dados necessários para gerar os MNNs ou MDEs. Entender como tratar esses dados antes de executar os MNNs ou MDEs.
+
+--
+
+3.  Entender o básico sobre algoritmos
+
+--
+
+4. Entender  o que é treino, teste, psuedoausencia , treshod e validação. Aprender a executar as análises de uma maneira organizada e reproduzível.  Aprender onde e como buscar as soluções específicas para os próprios problemas
+
+--
+
+5. Aprender a executar as análises de uma maneira organizada e reproduzível.
