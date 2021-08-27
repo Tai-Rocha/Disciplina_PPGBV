@@ -2,7 +2,7 @@
 title: "Aula_1: Panorama geral sobre o conceito de nicho ecológico e modelagem de distribuição potencial de espécies"
 author: "Tainá Rocha"
 date: "2019/06/17 (updated: `r Sys.Date()`)"
-output:
+output: 
   xaringan::moon_reader:
     lib_dir: libs
     css: xaringan-themer.css
@@ -94,4 +94,13 @@ Video-aula Luara Toruinho sobre concentios de nicho. Pr«oximos slides com conte
 __nicho fundamental__ da espécie, que inclui os intervalos das condições ambientais necessárias para a existência da espécie, sem considerar a influência de interações bióticas, tais como competição e predação. “...Uma  formalização abstrata do que usualmente se define com nicho ecológico (1957) <br>
 __nicho realizado__ descreve a parte do nicho fundamental no qual a espécie realmente ocorre, ou seja, é delimitado pelos fatores bióticos. 
 
+---
+# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
+
+No processo de modelagem de nicho é utilizado APENAS UM SUBESPAÇO do nicho ecológico OCUPADO pela espécie. Portanto, o modelo resultante representa uma aproximação do nicho da espécie e apenas nas dimensões das camadas ambientais utilizadas !
+
+
+```{r, include=FALSE}
+pagedown::chrome_print("aula_teoria_1.html",output="aula_teoria_1.pdf")
+```
 
