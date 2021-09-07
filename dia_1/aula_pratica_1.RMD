@@ -13,7 +13,7 @@ output:
       ratio: "14:9" 
 
 ---
-class: middle, center
+class: middle, left
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -42,7 +42,10 @@ Alguns links com material sobre R :
 - https://blog.curso-r.com/
 
 
---
+---
+
+# Linguagem R 
+
 .pull-left[
 
 ### Vantagens 
@@ -55,7 +58,7 @@ Alguns links com material sobre R :
 
 - Comunidade forte e colaborativa (Muito material disponível)
 ]
---
+
 .pull-right[
 
 ### Desvantagens
@@ -93,28 +96,56 @@ knitr::include_graphics("figs/R_ecology.jpg")
 
 No contexto dos  modelos de nicho ecológico e de distribuição potencial de espécies, existiam e existem outros tipos softwares (interface gráfica) para gerar tais modelos (openmodeler, modeco, maxent , diva gis). No entanto, é crescente a discussão que envolve a reprodutibilidade  das análises estatísticas em geral, e essa vem se tornando uma cobrança cada vez maior para análises de ENMs / SDMs também,  uma vez que estas podem envolver muitos passos (Referencias). É neste contexto que o uso de linguagem de programação, R principalmente, se tornou popular. O R possui um ecossistema que incentiva a reprodutibilidade, garantindo que qualquer resultado, da conta mais simples ao modelo mais complexo, possa ser reproduzido do começo ao fim. 
 
+---
+### E qual relação dessas ferramentas com a Modelagem de Nicho ?
 Em outras palavras: Você pode fazer suas análises através de códigos com R, bem como fazer alterações nesses códigos, que ficam registrados por históricos de alteraçõe com Git, deixando tudo isso hospedado em nuvem no Github (onde outros usuários ainda podem contribuir para melhorar seu código). Usando essas ferramentas integradas e da maneira correta e uma boa prática que garante maior reprodutibilidade de suas análises.  
 
 --- 
 ### Vamos ao que interessa!
 
+Essa é uma discplina de teoria e prática de ENMs e SDMs, portanto o objetivo maior é entender a teoria e conseguir gerar seus modelos. Usaremos pacotes de R no Rstudio para gerar os modelos, no entanto, diante dos imprevistos que sempre podem ocorrer (seja por falta de familiaridade com R/Rstudio), os modelos poderão ser gerados por softwares mais simples (interface gráfica). 
+
+---
+
 ### Um checklist de instalações.  
 
-Obs: Pedimos a instalação do R, Rstudio e Qgis como pré-requisito, uma vez que público de pós em geral já usa/usou essas ferramentas. Se não for o caso, no links a seguir existem instruções para essas instalações:
+Pedimos a instalação do R, Rstudio e Qgis como pré-requisitos, uma vez que público de pós-graduação no geral já usa/usou essas ferramentas. Se não for o caso, nos links a seguir existem instruções para essas instalações:
 
-1- Instalação do R: no link oficial https://www.r-project.org/  é possível encontrar as instruçoes de instalação de acordo com seu sistema operacional (Linux, Mac ou Windows)
+1- Instalação do R: no link oficial **https://www.r-project.org/**  é possível encontrar as instruçoes de instalação de acordo com seu sistema operacional (Linux, Mac ou Windows)
 
-Para os diferentes sistemas operacionais : https://livro.curso-r.com/1-1-instalacao-do-r.html 
+Para os diferentes sistemas operacionais : **https://livro.curso-r.com/1-1-instalacao-do-r.html** 
 
-Para windows : http://www.des.ufscar.br/software-r
+Para windows : **http://www.des.ufscar.br/software-r**
 
-Obs.: No geral, instalação de R no windows requer a instalação do Rtools (https://cran.r-project.org/bin/windows/Rtools/)
+Obs1.: No geral, instalação de R no windows requer a instalação do Rtools (https://cran.r-project.org/bin/windows/Rtools/)
 
 
 2- R Studio para desktop: Após instalar o R, instale o Rstudio pelo link https://www.rstudio.com/products/rstudio/download/ (também de acordo com o sistema operacional do computador).
 
-3- Intalação do git
+---
+--- 
+### Vamos ao que interessa!
 
+### Um checklist de instalações.  
 
+Nos próximos passos avançaremos para para instalação de Git a criação de conta no Github
 
+3- Instalação do git: Pelo link **https://git-scm.com/downloads** escolha a opção de download para seu sistema operacional e siga as instruções.
+
+---
+### Um checklist de instalações.  
+
+4- Crie sua conta no Github pelo link **https://github.com/**
+
+```{r, echo=FALSE, out.width="45%", fig.align='center'}
+knitr::include_graphics("figs/Github_conta.png")
+```
+---
+### Vamos ao que interessa!
+
+### Um checklist de instalações.  
+
+```{r, echo=FALSE, out.width="45%", fig.align='center'}
+knitr::include_graphics("figs/Github_2.png")
+```
 
