@@ -33,6 +33,15 @@ mono_light(
 
 Linguagem de programação de código aberto voltada principalmente para realização de análises estatísticas e construção de gráficos.
 
+Alguns links com material sobre R :
+
+- https://github.com/beatrizmilz/materiais_estudo_R
+
+- http://www.lampada.uerj.br/arquivosdb/_book2/introducao.html#o-que-%C3%A9-o-r
+
+- https://blog.curso-r.com/
+
+
 --
 .pull-left[
 
@@ -40,11 +49,11 @@ Linguagem de programação de código aberto voltada principalmente para realiza
 
 - Open Source  
 
-- Variedade de pacotes
+- Variedade de pacotes (Mais de 20 mil pacotes à nossa disposição e assim não precisamos "reiventar a roda")
 
 - Reprodutibilidade 
 
-- Comunidade forte e colaborativa
+- Comunidade forte e colaborativa (Muito material disponível)
 ]
 --
 .pull-right[
@@ -64,12 +73,47 @@ Linguagem de programação de código aberto voltada principalmente para realiza
 <br>
 
 # Github 
-o GitHub é um serviço baseado em nuvem que hospeda o sistema de controle de versão Git. Além de várias funcionalidaes (como criar webpages) Ele permite que os usuários colaborem e façam mudanças em projetos compartilhados enquanto mantêm um registro detalhado do progresso do seu código.
+o GitHub é um serviço baseado em nuvem que hospeda o sistema de controle de versão Git. Além de várias funcionalidaes (como criar webpages) Ele permite que os usuários colaborem e façam mudanças em projetos compartilhados enquanto mantêm um registro detalhado do progresso do seu código
 
 --- 
 
-## E qual relação dessas ferramehtas com Modelagem de Nicho ?
 
+---
+### E qual relação dessas ferramehtas com Modelagem de Nicho ?
+--
+
+A populazição do uso da liguagem R, principalmente na ecologia e relativamente recente. Veja este gráfico de Lai et al 2019 do artigo "Evaluating the popularity of R in ecology"
+
+```{r, echo=FALSE, out.width="75%", fig.align='center'}
+knitr::include_graphics("figs/R_ecology.jpg")
+```
+
+---
+### E qual relação dessas ferramentas com a Modelagem de Nicho ?
+
+No contexto dos  modelos de nicho ecológico e de distribuição potencial de espécies, existiam e existem outros tipos softwares (interface gráfica) para gerar tais modelos (openmodeler, modeco, maxent , diva gis). No entanto, é crescente a discussão que envolve a reprodutibilidade  das análises estatísticas em geral, e essa vem se tornando uma cobrança cada vez maior para análises de ENMs / SDMs também,  uma vez que estas podem envolver muitos passos (Referencias). É neste contexto que o uso de linguagem de programação, R principalmente, se tornou popular. O R possui um ecossistema que incentiva a reprodutibilidade, garantindo que qualquer resultado, da conta mais simples ao modelo mais complexo, possa ser reproduzido do começo ao fim. 
+
+Em outras palavras: Você pode fazer suas análises através de códigos com R, bem como fazer alterações nesses códigos, que ficam registrados por históricos de alteraçõe com Git, deixando tudo isso hospedado em nuvem no Github (onde outros usuários ainda podem contribuir para melhorar seu código). Usando essas ferramentas integradas e da maneira correta e uma boa prática que garante maior reprodutibilidade de suas análises.  
+
+--- 
+### Vamos ao que interessa!
+
+### Um checklist de instalações.  
+
+Obs: Pedimos a instalação do R, Rstudio e Qgis como pré-requisito, uma vez que público de pós em geral já usa/usou essas ferramentas. Se não for o caso, no links a seguir existem instruções para essas instalações:
+
+1- Instalação do R: no link oficial https://www.r-project.org/  é possível encontrar as instruçoes de instalação de acordo com seu sistema operacional (Linux, Mac ou Windows)
+
+Para os diferentes sistemas operacionais : https://livro.curso-r.com/1-1-instalacao-do-r.html 
+
+Para windows : http://www.des.ufscar.br/software-r
+
+Obs.: No geral, instalação de R no windows requer a instalação do Rtools (https://cran.r-project.org/bin/windows/Rtools/)
+
+
+2- R Studio para desktop: Após instalar o R, instale o Rstudio pelo link https://www.rstudio.com/products/rstudio/download/ (também de acordo com o sistema operacional do computador).
+
+3- Intalação do git
 
 
 
