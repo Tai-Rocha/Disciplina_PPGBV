@@ -1,5 +1,5 @@
 ---
-title: "Aula_1: Panorama geral sobre o conceito de nicho ecológico e modelagem de distribuição potencial de espécies"
+title: "Aula teórica 1: Panorama geral sobre o conceito de nicho ecológico e modelagem de distribuição potencial de espécies"
 author: "Tainá Rocha"
 date: "2019/06/17 (updated: `r Sys.Date()`)"
 output: 
