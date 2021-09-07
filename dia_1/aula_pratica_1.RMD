@@ -1,6 +1,6 @@
 ---
 title: "Aula prática dia 1: Introdução ao ambiente R e boas práticas. Reprodutibilidade. Organização de projetos com R e R studio usando Git e Github."
-author: "Tainá Rocha e Luara Tourinha"
+author: "Tainá Rocha"
 date: "2019/06/17 (updated: `r Sys.Date()`)"
 output: 
   xaringan::moon_reader:
@@ -72,11 +72,12 @@ Alguns links com material sobre R :
 ---
 # Git 
 
-É um sistema de controle de versões, usado principalmente no desenvolvimento de software para registrar todas as alterações, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo, inclusive de códigos de R. <br>
+É o sistema de controle de versões mais usado. Ele registra todas as alterações, e cira assim um histórico dessas alterações. Isso pode ser feito com quses todos os tipos de arquivos(.txt, .csv etc...), inclusive arquivos .R <br>
 <br>
 
 # Github 
-o GitHub é um serviço baseado em nuvem que hospeda o sistema de controle de versão Git. Além de várias funcionalidaes (como criar webpages) Ele permite que os usuários colaborem e façam mudanças em projetos compartilhados enquanto mantêm um registro detalhado do progresso do seu código
+
+GitHub é um serviço baseado em nuvem que hospeda os arquivos que usam Git como controle de versão. Além de várias funcionalidaes (como criar webpages), ele permite que os usuários colaborem e façam mudanças em projetos compartilhados enquanto mantêm um registro detalhado do progresso do seu código.
 
 --- 
 
