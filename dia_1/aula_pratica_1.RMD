@@ -125,7 +125,6 @@ Obs1.: No geral, instalação de R no windows requer a instalação do Rtools (h
 
 ---
 --- 
-### Vamos ao que interessa!
 
 ### Um checklist de instalações.  
 
@@ -134,7 +133,7 @@ Nos próximos passos avançaremos para para instalação de Git a criação de c
 3- Instalação do git: Pelo link **https://git-scm.com/downloads** escolha a opção de download para seu sistema operacional e siga as instruções.
 
 ---
-### Um checklist de instalações.  
+### Github
 
 4- Crie sua conta no Github pelo link **https://github.com/**
 
@@ -142,11 +141,23 @@ Nos próximos passos avançaremos para para instalação de Git a criação de c
 knitr::include_graphics("figs/Github_conta.png")
 ```
 ---
-### Vamos ao que interessa!
 
-### Um checklist de instalações.  
+### Github  
 
 ```{r, echo=FALSE, out.width="45%", fig.align='center'}
 knitr::include_graphics("figs/Github_2.png")
 ```
 
+---
+
+### Configurações após a instalação. Para configurar seu Git existem duas possibilidades. 
+
+## Pelo Terminal: 
+
+1- No Rstudio procure pela aba **Terminal** ou abra seu próprio terminal (conhecido por Prompt no Windows).
+
+2- Informe para o Git seu nome de usário (o mesmo do Github) e seu e-mail (o mesmo do Github). Todo comando de git no terminal começa por **git** .
+
+``` git config --global user.name "Tai-Rocha" ```
+
+``` git config --global user.email taina013@gmail.com ```
