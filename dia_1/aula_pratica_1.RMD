@@ -37,7 +37,7 @@ mono_light(
 
 ### - Parte 3: Criando o repositório dos projetos 
 
-### - Parte 4: Organização de projetos 
+### - Parte 4: Organização dos projetos 
 
 
 ---
@@ -45,17 +45,11 @@ mono_light(
 
 ## Linguagem R 
 
-Linguagem de programação de código aberto voltada principalmente para realização de análises estatísticas e construção de gráficos.
+Linguagem de programação de código aberto voltada principalmente para realização de análises estatísticas e construção de gráficos. R pode ser rodado em qualquer terminal (linux,mac, windows). A interface original de R é um console onde o código é escrito.
 
-Alguns links com material sobre R :
-
-- https://github.com/beatrizmilz/materiais_estudo_R
-
-- http://www.lampada.uerj.br/arquivosdb/_book2/introducao.html#o-que-%C3%A9-o-r
-
-- https://blog.curso-r.com/
-
-
+```{r, echo=FALSE, out.width="60%", fig.align='center'}
+knitr::include_graphics("figs/R_GUI.png")
+```
 ---
 
 # Parte 1 
@@ -88,14 +82,27 @@ Alguns links com material sobre R :
 ---
 # Parte 1 
 
-## Git
+## Rstudio
+Uma interface gráfica para R. 
 
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("figs/default_rstudio.png")
+```
+---
+# Parte 1 
+
+```{r, echo=FALSE, out.width="15%", fig.align='center'}
+knitr::include_graphics("figs/Git_logo.png")
+```
 É o sistema de controle de versões mais usado. Ele registra todas as alterações, e cira assim um histórico dessas alterações. Isso pode ser feito com quses todos os tipos de arquivos(.txt, .csv etc...), inclusive arquivos .R <br>
 <br>
-
-## Github 
+<br>
+```{r, echo=FALSE, out.width="20%", fig.align='center'}
+knitr::include_graphics("figs/Github_logo.png")
+```
 
 GitHub é um serviço baseado em nuvem que hospeda os arquivos que usam Git como controle de versão. Além de várias funcionalidaes (como criar webpages), ele permite que os usuários colaborem e façam mudanças em projetos compartilhados enquanto mantêm um registro detalhado do progresso do seu código.
+
 ---
 # Parte 1 
 
@@ -145,7 +152,7 @@ Outros links úteis para instalações:
 **http://www.des.ufscar.br/software-r**  (Windows)
 <br>
 <br>
-Obs1.: No geral, instalação de R no windows requer a instalação do Rtools <br>  https://cran.r-project.org/bin/windows/Rtools/
+Obs1.: No geral, instalação de R no windows requer a instalação do Rtools <br>  **https://cran.r-project.org/bin/windows/Rtools/**
 
 ---
 # Parte 2 
@@ -161,11 +168,13 @@ Escolha a opção **R Studio para desktop** e de acordo com seu sistema operacio
 
 ### Git 
 
-Escolha a opção de download para seu sistema operacional e siga as instruções. Link:
-<br>
+Escolha a opção de download para seu sistema operacional e siga as instruções do link a seguir:
 <br>
 **https://git-scm.com/downloads** 
 
+```{r, echo=FALSE, out.width="55%", fig.align='center'}
+knitr::include_graphics("figs/download_git.png")
+```
 ---
 
 # Parte 2 
@@ -194,14 +203,13 @@ knitr::include_graphics("figs/Github_2.png")
 ### Configuração Git. Para configurar seu Git existem duas possibilidades. 
 
 #### Configurando pelo Terminal: 
-
-1- No Rstudio procure pela aba **Terminal** ou abra seu próprio terminal (conhecido por Prompt no Windows).
+No Rstudio procure pela aba **Terminal** ou abra seu próprio terminal (conhecido por Prompt no Windows).
 
 ```{r, echo=FALSE, out.width="35%", fig.align='center'}
 knitr::include_graphics("figs/Terminal.png")
 ```
 
-2- Informe para o Git seu nome de usário (o mesmo do Github) e seu e-mail (o mesmo do Github). Todo comando de git no terminal começa por **git** .
+Informe para o Git seu nome de usário (o mesmo do Github) e seu e-mail (o mesmo do Github). Todo comando de git no terminal começa por **git** .
 
 ``` git config --global user.name "Tai-Rocha" ```
 
@@ -214,11 +222,11 @@ knitr::include_graphics("figs/Terminal.png")
 
 #### Configurando pelo pacote R usethis :
 
-1- Caso não tenha o pacote, instale pelo seguinte comando:
+Caso não tenha o pacote, instale pelo seguinte comando:
 
 **install.packages("usethis")**
 
-2- Em seguinda use a função **use_git_config**
+Em seguinda use a função **use_git_config**
 
 **usethis::use_git_config(user.name = "Tai-Rocha",
                         user.email = "taina013@gmail.com")**
@@ -232,7 +240,7 @@ knitr::include_graphics("figs/Terminal.png")
 ### Configurando o Github com Rstudio. 
 VOCÊ SÓ PRECISA FAZER ISTO UMA VEZ EM CADA COMPUTADOR. Vamos gera uma chave de segurança que identifica o computador e copiamos ela no GitHub. Esta chave é para cada computador individual. Você pode ter uma conta de GitHub e trabalhar em diferentes computadores, e cada um terá a própria chave.
 
-1- No R studio, vá até **Global option...** (Opçoes globais) 
+No R studio, vá até **Global option...** (Opçoes globais) 
 ```{r, echo=FALSE, out.width="65%", fig.align='center'}
 knitr::include_graphics("figs/global_options.jpg")
 ```
@@ -241,7 +249,7 @@ knitr::include_graphics("figs/global_options.jpg")
 
 ### Configurando o Github com Rstudio. 
 
-2- NA opção  **Git/SVN** cheque se git está apontando para um arquivo **git.exe** em windows, em mac e linux **/usr/bin/git** ou **/usr/bin/gnome-terminal**  . Se você nunca fez isto, não deve ter nada no campo da chave RSA, clique Criar RSA Key (Create). O preenchimentos do campos que aparecem é opcional 
+Na opção  **Git/SVN** cheque se git está apontando para um arquivo **git.exe** em windows, em mac e linux **/usr/bin/git** ou **/usr/bin/gnome-terminal**  . Se você nunca fez isto, não deve ter nada no campo da chave RSA, clique Criar RSA Key (Create). O preenchimentos do campos que aparecem é opcional 
 
 ```{r, echo=FALSE, out.width="40%", fig.align='center'}
 knitr::include_graphics("figs/Key_1.png")
@@ -250,7 +258,7 @@ knitr::include_graphics("figs/Key_1.png")
 # Parte 2 
 
 ### Configurando o Github com Rstudio. 
-4- Em seguida clique em **View public key** destacado em azul. Copie a RSA Key. Ela é a chave que identifica seu computador. 
+Em seguida clique em **View public key** destacado em azul. Copie a RSA Key. Ela é a chave que identifica seu computador. 
 ```{r, echo=FALSE, out.width="45%", fig.align='center'}
 knitr::include_graphics("figs/Key_2.png")
 ```
@@ -260,7 +268,7 @@ knitr::include_graphics("figs/Key_2.png")
 # Parte 2 
 
 ### Configurando o Github com Rstudio. 
-5- Para copiar no GitHub, vá até o canto superior direito da sua página inicial do Perfil e selecione a opção **Settings**, em seguida vá na opção **SSH and GPG Keys** para colar e adicionar a chave. 
+Para copiar no GitHub, vá até o canto superior direito da sua página inicial do Perfil e selecione a opção **Settings**, em seguida vá na opção **SSH and GPG Keys** para colar e adicionar a chave. 
 
 .pull-left[
 ```{r, echo=FALSE, out.width="30%", fig.align='left'}
@@ -279,7 +287,7 @@ knitr::include_graphics("figs/Key_3.png")
 
 ### Criando o repositório do projeto da disciplina 
 
-1-  No canto superior direito na sua conta do Github, clique no  **+** , em seguida em New repository
+No canto superior direito na sua conta do Github, clique no  **+** , em seguida em New repository
 
 ```{r, echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("figs/Create_new_repo.png")
@@ -289,9 +297,9 @@ knitr::include_graphics("figs/Create_new_repo.png")
 
 ### Criando o repositório do projeto da disciplina 
 
-2- Nomei de forma informativa seu repositório, crie uma descrição igualmente informativa. Salecione a opção **Public** e opção **Add Readme** . Fialize clicando em **Create repository **
+Nomei de forma informativa seu repositório, crie uma descrição igualmente informativa. Salecione a opção **Public** e opção **Add Readme** . Fialize clicando em **Create repository **
 
-```{r, echo=FALSE, out.width="50%", fig.align='center'}
+```{r, echo=FALSE, out.width="35%", fig.align='center'}
 knitr::include_graphics("figs/repo_1.png")
 ```
 
@@ -300,29 +308,33 @@ knitr::include_graphics("figs/repo_1.png")
 
 ### Criando o repositório do projeto da disciplina 
 
-3- Já no seu repositório , clique na opção **Code** e copie caminho HTTPS
+Já no seu repositório , clique na opção **Code** e copie caminho HTTPS
 
 ```{r, echo=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("figs/repo_to_rstudio.png")
 ```
+---
+# Parte 3 
 
-4- No Rstudio vá en File , em seguida new project
+### Criando o repositório do projeto da disciplina
+
+No Rstudio vá em **File**, em seguida **New project**
 
 ```{r, echo=FALSE, out.width="30%", fig.align='center'}
 knitr::include_graphics("figs/new_project.jpg")
 ```
-
+---
 # Parte 3 
 
 ### Criando o repositório do projeto da disciplina 
 
-5- Selecione a opção version control e seguida a opção Git
+5- Selecione a opção **Version control** e seguida a opção **Git**
 
-```{r, echo=FALSE, out.width="35%", fig.align='left'}
+```{r, echo=FALSE, out.width="30%", fig.align='left'}
 knitr::include_graphics("figs/versio_control.png")
 ```
 
-```{r, echo=FALSE, out.width="40%", fig.align='right'}
+```{r, echo=FALSE, out.width="35%", fig.align='right'}
 knitr::include_graphics("figs/Git.png")
 ```
 ---
@@ -330,21 +342,21 @@ knitr::include_graphics("figs/Git.png")
 
 ### Criando o repositório do projeto da disciplina 
 
-6- Indique o caminho onde seu projeto/repositório ficara salvo
+Indique o caminho onde seu projeto/repositório ficara salvo
 
 ```{r, echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("figs/projeto_1.png")
 ```
 
-Selecione Create Project
+Para terminar clique em **Create Project**
 ---
 # Parte 3 
 
 ### Criando o repositório do projeto da disciplina 
 
-7- Ao criar seu projeto desta forma, no seu Rstudio deve surgir uma aba chamada Git
+Ao criar seu projeto desta forma, no seu Rstudio deve surgir uma aba chamada Git. E por onde vamos realizar o controle de versão (histórico de alterações dos nossos scritps)
 
-```{r, echo=FALSE, out.width="100%", fig.align='center'}
+```{r, echo=FALSE, out.width="80%", fig.align='center'}
 knitr::include_graphics("figs/proj_rstudio.png")
 ```
 ---
