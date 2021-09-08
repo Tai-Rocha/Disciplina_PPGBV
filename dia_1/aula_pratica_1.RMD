@@ -150,7 +150,9 @@ knitr::include_graphics("figs/Github_2.png")
 
 ---
 
-### Configurações após a instalação. Para configurar seu Git existem duas possibilidades. 
+### Configurações após a instalação. 
+
+### Configuração Git. Para configurar seu Git existem duas possibilidades. 
 
 ## Pelo Terminal: 
 
@@ -161,3 +163,90 @@ knitr::include_graphics("figs/Github_2.png")
 ``` git config --global user.name "Tai-Rocha" ```
 
 ``` git config --global user.email taina013@gmail.com ```
+
+---
+
+## Pelo pacote usethis :
+
+1- Caso não tenha 
+
+**install.packages("usethis")**
+
+2- Em seguinda use a função **use_git_config**
+
+**usethis::use_git_config(user.name = "Tai-Rocha",
+                        user.email = "taina013@gmail.com")**
+
+
+##### Agora git está configurado no computador e sabe quem é você.
+
+---
+## Configurando o Github com Rstudio. 
+VOCÊ SÓ PRECISA FAZER ISTO UMA VEZ EM CADA COMPUTADOR. Vamos gera uma chave de segurança que identifica o computador e copiamos ela no GitHub. Esta chave é para cada computador individual. Você pode ter uma conta de GitHub e trabalhar em diferentes computadores, e cada um terá a própria chave.
+
+1- No R studio, vá até **Global option...** (Opçoes globais) 
+```{r, echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("figs/global_options.jpg")
+```
+---
+
+--- 
+## Configurando o Github com Rstudio. 
+2- NA opção  **Git/SVN** cheque se git está apontando para um arquivo **git.exe** em windows, em mac e linux **/usr/bin/git** ou **/usr/bin/gnome-terminal**  . Se você nunca fez isto, não deve ter nada no campo da chave RSA, clique Criar RSA Key (Create). O preenchimentos do campos que aparecem é opcional 
+
+```{r, echo=FALSE, out.width="40%", fig.align='center'}
+knitr::include_graphics("figs/Key_1.png")
+```
+
+
+
+---
+## Configurando o Github com Rstudio. 
+4- Em seguida clique em **View public key** destacado em azul. Copie a RSA Key. Ela é uma chave que identifica seu computador. 
+```{r, echo=FALSE, out.width="45%", fig.align='center'}
+knitr::include_graphics("figs/Key_2.png")
+```
+---
+
+--- 
+## Configurando o Github com Rstudio. 
+5- Para copiar no GitHub, vá até o canto superior direito da sua página inicial do Perfil e selecione a opção **Settings**, em seguida vá na opção **SSH and GPG Keys** para colar e adicionar a chave. 
+
+.pull-left[
+```{r, echo=FALSE, out.width="35%", fig.align='left'}
+knitr::include_graphics("figs/Seetings_Github.png")
+```
+]
+
+.pull-right[
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("figs/Key_3.png")
+```
+]
+---
+
+#### Tudo configurado! Agora Git, github e seu computador podem se comunicar. O próximo passo é criar o repositório do projeto da disciplina. Vamos lá?
+
+### Organizando fluxos de trabalho 
+
+1-  No canto superior direito na sua conta do Github, clique no  **+** , em seguida em New repository
+
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
+knitr::include_graphics("figs/Create_new_repo.png")
+```
+
+2- Nomei de forma informativa seu repositório, crie uma descrição igualmente informativa. Salecione a opção **Public** e opção **Add Readme** . Fialize clicando em **Create repository **
+
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
+knitr::include_graphics("figs/repo_1.png")
+```
+
+---
+### Organizando fluxos de trabalho 
+
+3- Já no seu repositório , clique na opçãp **Code** e copie caminho HTTPS
+
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("figs/repo_to_rstudio.png")
+```
+
