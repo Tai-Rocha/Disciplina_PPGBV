@@ -29,7 +29,9 @@ mono_light(
 )
 ```
 
-# Linguagem R 
+# Parte 1 
+
+## Linguagem R 
 
 Linguagem de programação de código aberto voltada principalmente para realização de análises estatísticas e construção de gráficos.
 
@@ -44,7 +46,9 @@ Alguns links com material sobre R :
 
 ---
 
-# Linguagem R 
+# Parte 1 
+
+## Linguagem R 
 
 .pull-left[
 
@@ -70,43 +74,50 @@ Alguns links com material sobre R :
 ]
 
 ---
-# Git 
+# Parte 1 
+
+## Git
 
 É o sistema de controle de versões mais usado. Ele registra todas as alterações, e cira assim um histórico dessas alterações. Isso pode ser feito com quses todos os tipos de arquivos(.txt, .csv etc...), inclusive arquivos .R <br>
 <br>
 
-# Github 
+## Github 
 
 GitHub é um serviço baseado em nuvem que hospeda os arquivos que usam Git como controle de versão. Além de várias funcionalidaes (como criar webpages), ele permite que os usuários colaborem e façam mudanças em projetos compartilhados enquanto mantêm um registro detalhado do progresso do seu código.
-
---- 
-
-
 ---
+# Parte 1 
+
 ### E qual relação dessas ferramehtas com Modelagem de Nicho ?
---
 
 A populazição do uso da liguagem R, principalmente na ecologia e relativamente recente. Veja este gráfico de Lai et al 2019 do artigo "Evaluating the popularity of R in ecology"
 
-```{r, echo=FALSE, out.width="75%", fig.align='center'}
+```{r, echo=FALSE, out.width="65%", fig.align='center'}
 knitr::include_graphics("figs/R_ecology.jpg")
 ```
 
 ---
-### E qual relação dessas ferramentas com a Modelagem de Nicho ?
+# Parte 1 
 
-No contexto dos  modelos de nicho ecológico e de distribuição potencial de espécies, existiam e existem outros tipos softwares (interface gráfica) para gerar tais modelos (openmodeler, modeco, maxent , diva gis). No entanto, é crescente a discussão que envolve a reprodutibilidade  das análises estatísticas em geral, e essa vem se tornando uma cobrança cada vez maior para análises de ENMs / SDMs também,  uma vez que estas podem envolver muitos passos (Referencias). É neste contexto que o uso de linguagem de programação, R principalmente, se tornou popular. O R possui um ecossistema que incentiva a reprodutibilidade, garantindo que qualquer resultado, da conta mais simples ao modelo mais complexo, possa ser reproduzido do começo ao fim. 
+### E qual relação dessas ferramentas com a ENMS/SDMS ?
+
+No contexto dos  modelos de nicho ecológico e de distribuição potencial de espécies, existiam e existem outros tipos softwares (interface gráfica) para gerar tais modelos (openmodeler, modeco, maxent , diva gis). No entanto, é crescente a discussão que envolve a reprodutibilidade  das análises estatísticas em geral, e essa vem se tornando uma cobrança cada vez maior para análises de ENMs / SDMs também,  uma vez que estas podem envolver muitos passos (Referencias). É neste contexto que o uso de linguagem de programação, R principalmente, se tornou popular. O R possui um ecossistema que incentiva a reprodutibilidade, garantindo que qualquer resultado, da conta mais simples ao modelo mais complexo, possa ser reproduzido do começo ao fim.
 
 ---
-### E qual relação dessas ferramentas com a Modelagem de Nicho ?
-Em outras palavras: Você pode fazer suas análises através de códigos com R, bem como fazer alterações nesses códigos, que ficam registrados por históricos de alteraçõe com Git, deixando tudo isso hospedado em nuvem no Github (onde outros usuários ainda podem contribuir para melhorar seu código). Usando essas ferramentas integradas e da maneira correta e uma boa prática que garante maior reprodutibilidade de suas análises.  
+# Parte 1 
 
+###### E qual relação dessas ferramentas com a ENMS/SDMS ?
+
+Você pode fazer suas análises através de códigos com R, bem como fazer alterações nesses códigos, que ficam registrados por históricos de alteraçõe com Git, deixando tudo isso hospedado em nuvem no Github (onde outros usuários ainda podem contribuir para melhorar seu código). Usando essas ferramentas integradas e da maneira correta e uma boa prática que garante maior reprodutibilidade de suas análises.  
 --- 
+
+# Parte 1 
+
 ### Vamos ao que interessa!
 
 Essa é uma discplina de teoria e prática de ENMs e SDMs, portanto o objetivo maior é entender a teoria e conseguir gerar seus modelos. Usaremos pacotes de R no Rstudio para gerar os modelos, no entanto, diante dos imprevistos que sempre podem ocorrer (seja por falta de familiaridade com R/Rstudio), os modelos poderão ser gerados por softwares mais simples (interface gráfica). 
-
 ---
+
+# Parte 2 
 
 ### Um checklist de instalações.  
 
@@ -126,6 +137,8 @@ Obs1.: No geral, instalação de R no windows requer a instalação do Rtools (h
 ---
 --- 
 
+# Parte 2 
+
 ### Um checklist de instalações.  
 
 Nos próximos passos avançaremos para para instalação de Git a criação de conta no Github
@@ -133,6 +146,9 @@ Nos próximos passos avançaremos para para instalação de Git a criação de c
 3- Instalação do git: Pelo link **https://git-scm.com/downloads** escolha a opção de download para seu sistema operacional e siga as instruções.
 
 ---
+
+# Parte 2 
+
 ### Github
 
 4- Crie sua conta no Github pelo link **https://github.com/**
@@ -141,6 +157,7 @@ Nos próximos passos avançaremos para para instalação de Git a criação de c
 knitr::include_graphics("figs/Github_conta.png")
 ```
 ---
+# Parte 2 
 
 ### Github  
 
@@ -149,6 +166,7 @@ knitr::include_graphics("figs/Github_2.png")
 ```
 
 ---
+# Parte 2 
 
 ### Configurações após a instalação. 
 
@@ -165,6 +183,7 @@ knitr::include_graphics("figs/Github_2.png")
 ``` git config --global user.email taina013@gmail.com ```
 
 ---
+# Parte 2 
 
 ## Pelo pacote usethis :
 
@@ -181,6 +200,8 @@ knitr::include_graphics("figs/Github_2.png")
 ##### Agora git está configurado no computador e sabe quem é você.
 
 ---
+# Parte 2 
+
 ## Configurando o Github com Rstudio. 
 VOCÊ SÓ PRECISA FAZER ISTO UMA VEZ EM CADA COMPUTADOR. Vamos gera uma chave de segurança que identifica o computador e copiamos ela no GitHub. Esta chave é para cada computador individual. Você pode ter uma conta de GitHub e trabalhar em diferentes computadores, e cada um terá a própria chave.
 
@@ -201,6 +222,8 @@ knitr::include_graphics("figs/Key_1.png")
 
 
 ---
+# Parte 2 
+
 ## Configurando o Github com Rstudio. 
 4- Em seguida clique em **View public key** destacado em azul. Copie a RSA Key. Ela é uma chave que identifica seu computador. 
 ```{r, echo=FALSE, out.width="45%", fig.align='center'}
@@ -209,6 +232,8 @@ knitr::include_graphics("figs/Key_2.png")
 ---
 
 --- 
+# Parte 2 
+
 ## Configurando o Github com Rstudio. 
 5- Para copiar no GitHub, vá até o canto superior direito da sua página inicial do Perfil e selecione a opção **Settings**, em seguida vá na opção **SSH and GPG Keys** para colar e adicionar a chave. 
 
@@ -224,6 +249,7 @@ knitr::include_graphics("figs/Key_3.png")
 ```
 ]
 ---
+# Parte 2 
 
 #### Tudo configurado! Agora Git, github e seu computador podem se comunicar. O próximo passo é criar o repositório do projeto da disciplina. Vamos lá?
 
@@ -242,6 +268,8 @@ knitr::include_graphics("figs/repo_1.png")
 ```
 
 ---
+# Parte 2 
+
 ### Organizando os fluxos de trabalho 
 
 3- Já no seu repositório , clique na opção **Code** e copie caminho HTTPS
@@ -257,6 +285,7 @@ knitr::include_graphics("figs/new_project.jpg")
 ```
 
 ---
+# Parte 2 
 
 5- Selecione a opção version control e seguida a opção Git
 
@@ -268,6 +297,7 @@ knitr::include_graphics("figs/versio_control.png")
 knitr::include_graphics("figs/Git.png")
 ```
 ---
+# Parte 2 
 
 6- Indique o caminho onde seu projeto/repositório ficara salvo
 
@@ -277,10 +307,11 @@ knitr::include_graphics("figs/projeto_1.png")
 
 Selecione Create Project
 ---
+# Parte 2 
 
 7- Ao criar seu projeto desta forma, no seu Rstudio deve surgir uma aba chamada Git
 
-```{r, echo=FALSE, out.width="50%", fig.align='center'}
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("figs/proj_rstudio.png")
 ```
 
