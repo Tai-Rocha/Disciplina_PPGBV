@@ -1,5 +1,5 @@
 ---
-title: "Aula prática dia 1: Introdução ao ambiente R e boas práticas. Reprodutibilidade. Organização de projetos com R e R studio usando Git e Github."
+title: "Aula prática dia 1: Introdução ao ambiente R e boas práticas. Organização de projetos com R e R studio usando Git e Github."
 author: "Tainá Rocha"
 date: "2019/06/17 (updated: `r Sys.Date()`)"
 output: 
@@ -29,6 +29,18 @@ mono_light(
 )
 ```
 
+## A prática esta dividida em 3 momentos 
+
+### - Parte 1 : Definições básicas sobre as ferramentas que usaremos 
+
+### - Parte 2: Instalações e configurações
+
+### - Parte 3: Criando o repositório dos projetos 
+
+### - Parte 4: Organização de projetos 
+
+
+---
 # Parte 1 
 
 ## Linguagem R 
@@ -54,13 +66,13 @@ Alguns links com material sobre R :
 
 ### Vantagens 
 
-- Open Source  
+- Open Source. Pode ser usado e modicado para qualquer fim
 
-- Variedade de pacotes (Mais de 20 mil pacotes à nossa disposição e assim não precisamos "reiventar a roda")
+- Pode ser usado em qualquer sistema operacional
 
-- Reprodutibilidade 
+- Variedade de pacotes. Mais de 20 mil pacotes à nossa disposição e assim não precisamos "reiventar a roda"
 
-- Comunidade forte e colaborativa (Muito material disponível)
+- Comunidade forte e colaborativa. Existe muito material disponível
 ]
 
 .pull-right[
@@ -87,63 +99,72 @@ GitHub é um serviço baseado em nuvem que hospeda os arquivos que usam Git como
 ---
 # Parte 1 
 
-### E qual relação dessas ferramehtas com Modelagem de Nicho ?
+### E qual relação dessas ferramentas com Modelagem de Nicho Ecólogicos (ENMs) e Distribuição Potencial de Espécies (SDMs) ?
 
-A populazição do uso da liguagem R, principalmente na ecologia e relativamente recente. Veja este gráfico de Lai et al 2019 do artigo "Evaluating the popularity of R in ecology"
+A popularização do uso da linguagem R, principalmente na ecologia é relativamente recente. Veja este gráfico de Lai et al. 2019 do artigo "Evaluating the popularity of R in ecology"
 
-```{r, echo=FALSE, out.width="65%", fig.align='center'}
+```{r, echo=FALSE, out.width="60%", fig.align='center'}
 knitr::include_graphics("figs/R_ecology.jpg")
 ```
-
 ---
 # Parte 1 
 
-### E qual relação dessas ferramentas com a ENMS/SDMS ?
+### E qual relação dessas ferramentas com Modelagem de Nicho Ecólogicos (ENMs) e Distribuição Potencial de Espécies (SDMs) ?
 
-No contexto dos  modelos de nicho ecológico e de distribuição potencial de espécies, existiam e existem outros tipos softwares (interface gráfica) para gerar tais modelos (openmodeler, modeco, maxent , diva gis). No entanto, é crescente a discussão que envolve a reprodutibilidade  das análises estatísticas em geral, e essa vem se tornando uma cobrança cada vez maior para análises de ENMs / SDMs também,  uma vez que estas podem envolver muitos passos (Referencias). É neste contexto que o uso de linguagem de programação, R principalmente, se tornou popular. O R possui um ecossistema que incentiva a reprodutibilidade, garantindo que qualquer resultado, da conta mais simples ao modelo mais complexo, possa ser reproduzido do começo ao fim.
-
+No contexto dos  ENMs/SDMs, existiam e existem outros tipos softwares (interface gráfica) para gerar tais modelos (openmodeler, modeco, maxent , diva gis). No entanto, é crescente a discussão que envolve a reprodutibilidade  das análises estatísticas em geral, e essa vem se tornando uma cobrança cada vez maior para análises de ENMs / SDMs também,  uma vez que estas podem envolver muitos passos (Referencias). É neste contexto que o uso de linguagem de programação, R principalmente, se tornou popular. O R possui um ecossistema que incentiva a reprodutibilidade, garantindo que qualquer resultado, da conta mais simples ao modelo mais complexo, possa ser reproduzido do começo ao fim.
 ---
 # Parte 1 
 
-###### E qual relação dessas ferramentas com a ENMS/SDMS ?
+### E qual relação dessas ferramentas com Modelagem de Nicho Ecólogicos (ENMs) e Distribuição Potencial de Espécies (SDMs) ?
 
 Você pode fazer suas análises através de códigos com R, bem como fazer alterações nesses códigos, que ficam registrados por históricos de alteraçõe com Git, deixando tudo isso hospedado em nuvem no Github (onde outros usuários ainda podem contribuir para melhorar seu código). Usando essas ferramentas integradas e da maneira correta e uma boa prática que garante maior reprodutibilidade de suas análises.  
---- 
+---
 
 # Parte 1 
 
 ### Vamos ao que interessa!
 
-Essa é uma discplina de teoria e prática de ENMs e SDMs, portanto o objetivo maior é entender a teoria e conseguir gerar seus modelos. Usaremos pacotes de R no Rstudio para gerar os modelos, no entanto, diante dos imprevistos que sempre podem ocorrer (seja por falta de familiaridade com R/Rstudio), os modelos poderão ser gerados por softwares mais simples (interface gráfica). 
----
+#### Essa é uma discplina de teoria e prática de ENMs e SDMs, portanto o objetivo maior é entender a teoria e conseguir gerar seus modelos. Usaremos pacotes de R no Rstudio para gerar os modelos.
 
+#### Em casos de imprevisto , também temos um plano B*
+---
 # Parte 2 
 
 ### Um checklist de instalações.  
 
 Pedimos a instalação do R, Rstudio e Qgis como pré-requisitos, uma vez que público de pós-graduação no geral já usa/usou essas ferramentas. Se não for o caso, nos links a seguir existem instruções para essas instalações:
 
-1- Instalação do R: no link oficial **https://www.r-project.org/**  é possível encontrar as instruçoes de instalação de acordo com seu sistema operacional (Linux, Mac ou Windows)
-
-Para os diferentes sistemas operacionais : **https://livro.curso-r.com/1-1-instalacao-do-r.html** 
-
-Para windows : **http://www.des.ufscar.br/software-r**
-
-Obs1.: No geral, instalação de R no windows requer a instalação do Rtools (https://cran.r-project.org/bin/windows/Rtools/)
-
-
-2- R Studio para desktop: Após instalar o R, instale o Rstudio pelo link https://www.rstudio.com/products/rstudio/download/ (também de acordo com o sistema operacional do computador).
+### R
+É possível encontrar as instruçoes de instalação de acordo com seu sistema operacional (Linux, Mac ou Windows) no link abaixo:<br>
+ **https://www.r-project.org/**  
+<br>
+Outros links úteis para instalações:
+<br>
+**https://livro.curso-r.com/1-1-instalacao-do-r.html** (Linux, Mac , Windows)
+<br>
+**http://www.des.ufscar.br/software-r**  (Windows)
+<br>
+<br>
+Obs1.: No geral, instalação de R no windows requer a instalação do Rtools <br>  https://cran.r-project.org/bin/windows/Rtools/
 
 ---
---- 
-
 # Parte 2 
 
-### Um checklist de instalações.  
+### Rstudio
 
-Nos próximos passos avançaremos para para instalação de Git a criação de conta no Github
+Escolha a opção **R Studio para desktop** e de acordo com seu sistema operacional. Link para instalação:<br>
+<br>
+<br>
+**https://www.rstudio.com/products/rstudio/download/**  
+---
+# Parte 2 
 
-3- Instalação do git: Pelo link **https://git-scm.com/downloads** escolha a opção de download para seu sistema operacional e siga as instruções.
+### Git 
+
+Escolha a opção de download para seu sistema operacional e siga as instruções. Link:
+<br>
+<br>
+**https://git-scm.com/downloads** 
 
 ---
 
@@ -151,7 +172,7 @@ Nos próximos passos avançaremos para para instalação de Git a criação de c
 
 ### Github
 
-4- Crie sua conta no Github pelo link **https://github.com/**
+Crie sua conta no Github pelo link **https://github.com/**  e caso não tenha uma conta clique e **Create an account**, destacado em azul
 
 ```{r, echo=FALSE, out.width="45%", fig.align='center'}
 knitr::include_graphics("figs/Github_conta.png")
@@ -161,20 +182,24 @@ knitr::include_graphics("figs/Github_conta.png")
 
 ### Github  
 
-```{r, echo=FALSE, out.width="45%", fig.align='center'}
+Preencha os campos necessários e cclqie em **Create account**
+
+```{r, echo=FALSE, out.width="35%", fig.align='center'}
 knitr::include_graphics("figs/Github_2.png")
 ```
 
 ---
 # Parte 2 
 
-### Configurações após a instalação. 
-
 ### Configuração Git. Para configurar seu Git existem duas possibilidades. 
 
-## Pelo Terminal: 
+#### Configurando pelo Terminal: 
 
 1- No Rstudio procure pela aba **Terminal** ou abra seu próprio terminal (conhecido por Prompt no Windows).
+
+```{r, echo=FALSE, out.width="35%", fig.align='center'}
+knitr::include_graphics("figs/Terminal.png")
+```
 
 2- Informe para o Git seu nome de usário (o mesmo do Github) e seu e-mail (o mesmo do Github). Todo comando de git no terminal começa por **git** .
 
@@ -185,9 +210,11 @@ knitr::include_graphics("figs/Github_2.png")
 ---
 # Parte 2 
 
-## Pelo pacote usethis :
+### Configuração Git. Para configurar seu Git existem duas possibilidades. 
 
-1- Caso não tenha 
+#### Configurando pelo pacote R usethis :
+
+1- Caso não tenha o pacote, instale pelo seguinte comando:
 
 **install.packages("usethis")**
 
@@ -197,12 +224,12 @@ knitr::include_graphics("figs/Github_2.png")
                         user.email = "taina013@gmail.com")**
 
 
-##### Agora git está configurado no computador e sabe quem é você.
+### Agora git está configurado no computador e sabe quem é você.
 
 ---
 # Parte 2 
 
-## Configurando o Github com Rstudio. 
+### Configurando o Github com Rstudio. 
 VOCÊ SÓ PRECISA FAZER ISTO UMA VEZ EM CADA COMPUTADOR. Vamos gera uma chave de segurança que identifica o computador e copiamos ela no GitHub. Esta chave é para cada computador individual. Você pode ter uma conta de GitHub e trabalhar em diferentes computadores, e cada um terá a própria chave.
 
 1- No R studio, vá até **Global option...** (Opçoes globais) 
@@ -210,22 +237,20 @@ VOCÊ SÓ PRECISA FAZER ISTO UMA VEZ EM CADA COMPUTADOR. Vamos gera uma chave de
 knitr::include_graphics("figs/global_options.jpg")
 ```
 ---
+# Parte 2 
 
---- 
-## Configurando o Github com Rstudio. 
+### Configurando o Github com Rstudio. 
+
 2- NA opção  **Git/SVN** cheque se git está apontando para um arquivo **git.exe** em windows, em mac e linux **/usr/bin/git** ou **/usr/bin/gnome-terminal**  . Se você nunca fez isto, não deve ter nada no campo da chave RSA, clique Criar RSA Key (Create). O preenchimentos do campos que aparecem é opcional 
 
 ```{r, echo=FALSE, out.width="40%", fig.align='center'}
 knitr::include_graphics("figs/Key_1.png")
 ```
-
-
-
 ---
 # Parte 2 
 
-## Configurando o Github com Rstudio. 
-4- Em seguida clique em **View public key** destacado em azul. Copie a RSA Key. Ela é uma chave que identifica seu computador. 
+### Configurando o Github com Rstudio. 
+4- Em seguida clique em **View public key** destacado em azul. Copie a RSA Key. Ela é a chave que identifica seu computador. 
 ```{r, echo=FALSE, out.width="45%", fig.align='center'}
 knitr::include_graphics("figs/Key_2.png")
 ```
@@ -234,11 +259,11 @@ knitr::include_graphics("figs/Key_2.png")
 --- 
 # Parte 2 
 
-## Configurando o Github com Rstudio. 
+### Configurando o Github com Rstudio. 
 5- Para copiar no GitHub, vá até o canto superior direito da sua página inicial do Perfil e selecione a opção **Settings**, em seguida vá na opção **SSH and GPG Keys** para colar e adicionar a chave. 
 
 .pull-left[
-```{r, echo=FALSE, out.width="35%", fig.align='left'}
+```{r, echo=FALSE, out.width="30%", fig.align='left'}
 knitr::include_graphics("figs/Seetings_Github.png")
 ```
 ]
@@ -248,18 +273,21 @@ knitr::include_graphics("figs/Seetings_Github.png")
 knitr::include_graphics("figs/Key_3.png")
 ```
 ]
----
-# Parte 2 
-
 #### Tudo configurado! Agora Git, github e seu computador podem se comunicar. O próximo passo é criar o repositório do projeto da disciplina. Vamos lá?
+---
+# Parte 3 
 
-### Organizando fluxos de trabalho 
+### Criando o repositório do projeto da disciplina 
 
 1-  No canto superior direito na sua conta do Github, clique no  **+** , em seguida em New repository
 
 ```{r, echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("figs/Create_new_repo.png")
 ```
+---
+# Parte 3 
+
+### Criando o repositório do projeto da disciplina 
 
 2- Nomei de forma informativa seu repositório, crie uma descrição igualmente informativa. Salecione a opção **Public** e opção **Add Readme** . Fialize clicando em **Create repository **
 
@@ -268,9 +296,9 @@ knitr::include_graphics("figs/repo_1.png")
 ```
 
 ---
-# Parte 2 
+# Parte 3 
 
-### Organizando os fluxos de trabalho 
+### Criando o repositório do projeto da disciplina 
 
 3- Já no seu repositório , clique na opção **Code** e copie caminho HTTPS
 
@@ -284,8 +312,9 @@ knitr::include_graphics("figs/repo_to_rstudio.png")
 knitr::include_graphics("figs/new_project.jpg")
 ```
 
----
-# Parte 2 
+# Parte 3 
+
+### Criando o repositório do projeto da disciplina 
 
 5- Selecione a opção version control e seguida a opção Git
 
@@ -297,7 +326,9 @@ knitr::include_graphics("figs/versio_control.png")
 knitr::include_graphics("figs/Git.png")
 ```
 ---
-# Parte 2 
+# Parte 3 
+
+### Criando o repositório do projeto da disciplina 
 
 6- Indique o caminho onde seu projeto/repositório ficara salvo
 
@@ -307,12 +338,16 @@ knitr::include_graphics("figs/projeto_1.png")
 
 Selecione Create Project
 ---
-# Parte 2 
+# Parte 3 
+
+### Criando o repositório do projeto da disciplina 
 
 7- Ao criar seu projeto desta forma, no seu Rstudio deve surgir uma aba chamada Git
 
 ```{r, echo=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("figs/proj_rstudio.png")
 ```
+---
 
+# Parte 4 
 
