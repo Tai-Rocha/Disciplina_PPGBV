@@ -242,11 +242,46 @@ knitr::include_graphics("figs/repo_1.png")
 ```
 
 ---
-### Organizando fluxos de trabalho 
+### Organizando os fluxos de trabalho 
 
-3- Já no seu repositório , clique na opçãp **Code** e copie caminho HTTPS
+3- Já no seu repositório , clique na opção **Code** e copie caminho HTTPS
 
 ```{r, echo=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("figs/repo_to_rstudio.png")
 ```
+
+4- No Rstudio vá en File , em seguida new project
+
+```{r, echo=FALSE, out.width="30%", fig.align='center'}
+knitr::include_graphics("figs/new_project.jpg")
+```
+
+---
+
+5- Selecione a opção version control e seguida a opção Git
+
+```{r, echo=FALSE, out.width="35%", fig.align='left'}
+knitr::include_graphics("figs/versio_control.png")
+```
+
+```{r, echo=FALSE, out.width="40%", fig.align='right'}
+knitr::include_graphics("figs/Git.png")
+```
+---
+
+6- Indique o caminho onde seu projeto/repositório ficara salvo
+
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
+knitr::include_graphics("figs/projeto_1.png")
+```
+
+Selecione Create Project
+---
+
+7- Ao criar seu projeto desta forma, no seu Rstudio deve surgir uma aba chamada Git
+
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
+knitr::include_graphics("figs/proj_rstudio.png")
+```
+
 
