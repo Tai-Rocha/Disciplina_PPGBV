@@ -95,8 +95,19 @@ knitr::include_graphics("figs/default_rstudio.png")
 knitr::include_graphics("figs/Git_logo.png")
 ```
 É o sistema de controle de versões mais usado. Ele registra todas as alterações, e cira assim um histórico dessas alterações. Isso pode ser feito com quses todos os tipos de arquivos(.txt, .csv etc...), inclusive arquivos .R <br>
-<br>
-<br>
+
+Todo comando de git no terminal começa por **git**. Os principais comandos que vamos usar
+
+**git commit** : para adicionar arquivos
+
+**git push** :
+
+**git pull** : para baixar para seu computador as atualizaçãoes que estão na núvem (no nosso caso no Github). 
+
+Isso será melhor entendido mais adiante. 
+---
+# Parte 1 
+
 ```{r, echo=FALSE, out.width="20%", fig.align='center'}
 knitr::include_graphics("figs/Github_logo.png")
 ```
@@ -209,7 +220,7 @@ No Rstudio procure pela aba **Terminal** ou abra seu próprio terminal (conhecid
 knitr::include_graphics("figs/Terminal.png")
 ```
 
-Informe para o Git seu nome de usário (o mesmo do Github) e seu e-mail (o mesmo do Github). Todo comando de git no terminal começa por **git** .
+Informe para o Git seu nome de usário (o mesmo do Github) e seu e-mail (o mesmo do Github).
 
 ``` git config --global user.name "Tai-Rocha" ```
 
@@ -363,3 +374,119 @@ knitr::include_graphics("figs/proj_rstudio.png")
 
 # Parte 4 
 
+### Organização dos projetos
+
+Vamos criar uma estrutura de pastas para seu projeto. Isso facilitará o gereciamento do projeto. Análises de ENMs/SDMs envolvem muitos e diferentes tipos de arquivos (é fácil se perder se não houver essa organização).
+
+```{r, echo=FALSE, out.width="35%", fig.align='center'}
+knitr::include_graphics("figs/pastas_subpastas.png")
+```
+
+Uma estrutra simples envolve basicamente pastas para os dados, para os scripts, para os resultados, para documetos gerais (.doc, .pdf, .ppt) e para figuras. Dentro destas podem existem outras subpastas. A melhor organização fica a seu critério. 
+---
+
+# Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para nossos scripts R
+
+
+Vamos criar um script de teste. Vá no no seguinte ícone clique R script
+
+
+---
+# Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para nossos scripts R
+
+
+Digite **Teste** no seu arquivo R que até agora esta em branco. Em seguida salve este script (clicando noícone do disquete) com o nome "Teste" na pasta **R**, salvaremos todos os script R nesta pasta.  
+ 
+```{r, echo=FALSE, out.width="35%", fig.align='center'}
+knitr::include_graphics("figs/disqute_save.jpg")
+```
+---
+# Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para nossos scripts R
+
+```{r, echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("figs/Git_script_1.png")
+```
+---
+# Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para nossos scripts R
+
+```{r, echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("figs/Git_script_2.png")
+```
+---
+# Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para nossos scripts R
+
+```{r, echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("figs/Git_script_3.png")
+```
+---
+# Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para nossos scripts R
+
+```{r, echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("figs/Git_script_4.png")
+```
+---
+# Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para nossos scripts R
+
+```{r, echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("figs/Push.png")
+```
+---
+# Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para nossos scripts R
+
+```{r, echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("figs/Push_2.png")
+```
+---
+# Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para nossos scripts R
+
+```{r, echo=FALSE, out.width="75%", fig.align='center'}
+knitr::include_graphics("figs/git_github_test.png")
+```
+---
+# Parte 4 
+
+### Organização dos projetos
+
+```{r, echo=FALSE, out.width="15%", fig.align='center'}
+knitr::include_graphics("figs/git_opts_rstudio.png")
+```
+
+```{r, echo=FALSE, out.width="55%", fig.align='center'}
+knitr::include_graphics("figs/git-github_test_2.png")
+```
