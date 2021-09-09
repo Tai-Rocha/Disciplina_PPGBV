@@ -490,3 +490,15 @@ knitr::include_graphics("figs/git_opts_rstudio.png")
 ```{r, echo=FALSE, out.width="55%", fig.align='center'}
 knitr::include_graphics("figs/git-github_test_2.png")
 ```
+---
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Fim da prática !
+
+```{r, echo=FALSE, out.width="55%", fig.align='center'}
+knitr::include_graphics("figs/git-github_test_2.png")
+```
