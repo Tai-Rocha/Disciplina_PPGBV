@@ -32,7 +32,7 @@ mono_light(
 # Passos para iniciar um trabalho com ENMS/SDMs
 
 ---
-# Definir a pergunta 
+### Definir a pergunta 
 - O QUÊ você quer modelar? 
 - ONDE e principalmente POR QUÊ e PARA QUÊ você quer modelar essa espécie ou conjunto de espécies?
 - Conservação de espécie ameaçada, rara e/ou endêmica;
@@ -45,7 +45,7 @@ mono_light(
 ### Uma das principais críticas ao uso dessa ferramenta é que na maioria das vezes se faz o modelo pelo modelo em si. Não se complementa essa análise com outros procedimentos e nem se responde, de fato, perguntas ou se testa hipóteses com base neles.
 
 ---
-# Estabelecer a abrangência geográfica/ambiental do estudo
+### Estabelecer a abrangência geográfica/ambiental do estudo
 ### A abrangência geográfica deve sempre casar com a distribuição conhecida/esperada da espécie.
 ###Prefira sempre usar limites naturais (bioma, ecossistema, tipos vegetacionais, bacias hidrograficas etc) do que geopolíticos (municipio, estado, país).
 
@@ -53,40 +53,33 @@ mono_light(
 - Que escala melhor se aplica a essa abrangência? Neotropical, Continental, Regional, Local?
 - Que resolução melhor se aplica a essa escala? Ou Qual tamanho de pixel (célula) utilizar? Geralmente se usa resoluções espaciais   de 1km, 5km, 10km lineares.
 ---
-# Levantar os dados bióticos e abióticos referentes a pergunta. Verificar se a qualidade e a quantidade dos dados bióticos e abióticos são suficientes
+### Levantar os dados bióticos e abióticos referentes a pergunta. Verificar  qualidade e a quantidade dos dados bióticos (suficiência amostral)
+
+- Qualidade taxonômica (verificar sinonímios)
+
+- Qualidade de georeferenciamento (Dados próprios de campo coletados com gps? ou dados de rede com proveniencia duvidosa?)
 
 ---
-# Limpar e definir quais dados (bióticos e abióticos) serão usados no projeto
+### Levantar os dados bióticos e abióticos referentes a pergunta. Verificar  qualidade e a quantidade dos dados bióticos (suficiência amostral)
 
+- Esteja atento a viés amostral. Análises prévias do dados para verificar se as informações dos pontos de ocorrência estão bem distribuídas no espaço geográfico e ambiental gerando tabelas cruzando os pontos de ocorrência (lat, long) e as variáveis ambientais utilizadas (temp, prec, elev etc).
+
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
+knitr::include_graphics("figs/vies_amostral.png")
+```
 ---
-# Escolher algoritmo(s) para modelagem
+## Escolher algoritmo(s) para modelagem
+### Você pode escolher um ou mais algoritmos de modelagem baseado na:
+- Quantidade de dados bióticos disponíveis
 
+- Adequação à pergunta
+
+- Adequação à qualidade dos dados
+
+#### No caso de escolher mais de um algoritmo para a realização de um experimento, você pode optar por apresentar o resultado do algoritmo com os melhores valores de performance, baseado na estatística aplicada. 
+
+#### Ou, se não houver diferença significativa entre esses valores, alguns autores optam por apresentar o resultado da modelagem como uma soma, ou intersecção, ou ainda uma média entre os resultados de diferentes algoritmos, a partir de um determinado limiar de corte. Esta técnica é utilizada para dar maior robustez ao resultado apresentado (técnica “ensemble” ou de consenso entre algoritmos).
 ---
-# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
-
-+ __Elton (1927)__ : muda o foco para o papel funcional da espécie em relação ao seu nível trófico; “...o nicho de um animal significa sua posição no ambiente biótico, sua relação com alimento e inimigos” .
-
-
----
-# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
-
-+ __Lotka-Volterra (1925) e Gause (1934)__: adicionaram formalmente a intensidade da competição entre espécies ao conceito de nicho; Competição inter e intraespecifica, Modelo predador-presa (Lotka-Volterra) e princípio da exclusão competitiva (Gause).
-
-
----
-# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
-
-+ __Hutchinson (1944-1958)__ : o termo nicho  definido como “...a soma de todos os fatores ambientais agindo sobre um organismo, uma região de um hiper-espaço n-dimensional…(1944). Um espaço n-dimensional onde cada dimensão representa o intervalo de condições ambientais ou de recursos necessários para a sobrevivência e reprodução da espécie, tais como: temperatura, umidade, salinidade, pH, recursos alimentares, locais para nidificação, intensidade luminosa, pressão predatória, densidade populacional, entre outros. Divididos em:
-
---
-__nicho fundamental__ da espécie, que inclui os intervalos das condições ambientais necessárias para a existência da espécie, sem considerar a influência de interações bióticas, tais como competição e predação. “...Uma  formalização abstrata do que usualmente se define com nicho ecológico (1957) <br>
-__nicho realizado__ descreve a parte do nicho fundamental no qual a espécie realmente ocorre, ou seja, é delimitado pelos fatores bióticos. 
-
----
-# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
-
-No processo de modelagem de nicho é utilizado APENAS UM SUBESPAÇO do nicho ecológico OCUPADO pela espécie. Portanto, o modelo resultante representa uma aproximação do nicho da espécie e apenas nas dimensões das camadas ambientais utilizadas !
-
 
 #```{r, include=FALSE}
 #pagedown::chrome_print("aula_teoria_1.html",output="aula_teoria_1.pdf")

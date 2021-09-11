@@ -1,0 +1,88 @@
+---
+title: "Aula pratica 2: Coleta e limpeza de dados bióticos (ocorrncias georreferenciadas) e abióticos (variáveis ambientais)"
+author: "Tainá Rocha"
+date: "2019/06/17 (updated: `r Sys.Date()`)"
+output: 
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "20:10" 
+
+---
+class: middle, center
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include = FALSE}
+library(xaringanthemer)
+mono_light(
+  base_color = "#23395b", white_color = "white",
+  header_font_google = google_font("Source Sans Pro"),
+  text_font_google   = google_font("Source Sans Pro", "300", "300i"),
+  code_font_google   = google_font("Ubuntu Mono"), text_font_size = "20px"
+)
+```
+
+### SpeciesLink
+
+- Acesse a base pelo link https://specieslink.net/
+ 
+```{r, echo=FALSE, out.width="80%", fig.align='center'}
+knitr::include_graphics("figs/specieslink_0.png")
+```
+---
+### SpeciesLink
+
+- Faça o login (ou crie sua conta para conseuir baixar os dados)
+
+```{r, echo=FALSE, out.width="80%", fig.align='center'}
+knitr::include_graphics("figs/specieslink_1.png")
+```
+---
+### SpeciesLink
+
+- Após fazer o login, selecione a opção "busca" na página inicial para ser direcionado para seguinte página:
+
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("figs/specieslink_2.png")
+```
+- A busca foi realizada para a espécies *Leandra carassana* no campo "Nome científico", no último campo "coordenadas geográficas", selecionamos as opções "originais" e "consistentes". Após preencher os campos clique em "buscar registros"
+---
+### SpeciesLink
+
+- Na página seguinte, selecionamos a opção "baixar" 
+
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("figs/specieslink_3.png")
+```
+---
+### SpeciesLink
+
+- Na página seguinte no campo "formato de arquivo" selecionamos a opção "texto separado por tab" e em "conjunto de pontos" a opção "todos os campos". Finalize selecionando a opção "confirmar"
+
+```{r, echo=FALSE, out.width="60%", fig.align='center'}
+knitr::include_graphics("figs/specieslink_4.png")
+```
+---
+### SpeciesLink
+- A planilha será enviada para seu email. 
+
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("figs/specieslink_5.png")
+```
+
+- A planilha dessa prática esta salva no caminho: *"projeto_1/dado/ocorrencias/raw/speciesLink-20210909210259-0006008.txt"*
+---
+
+#### A busca no GBIF e outras bases não é tão diferente.
+
+#```{r, include=FALSE}
+#pagedown::chrome_print("aula_teoria_1.html",output="aula_teoria_1.pdf")
+#```
+
