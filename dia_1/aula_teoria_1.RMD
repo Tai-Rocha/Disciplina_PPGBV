@@ -1,5 +1,5 @@
 ---
-title: "Aula teórica 1: Panorama geral sobre o conceito de nicho ecológico e modelagem de distribuição potencial de espécies"
+title: "Aula teórica 1: Panorama geral sobre conceitos de nicho ecológico"
 author: "Tainá Rocha"
 date: "2019/06/17 (updated: `r Sys.Date()`)"
 output: 
@@ -29,64 +29,69 @@ mono_light(
 )
 ```
 
-# Modelagem de nicho ecológico e distribuição de espécies. 
-
-
----
-# Panomara geral com alguns conceitos básicos para situar. 
-
-+ __Modelos __ :
-Um modelo pode ser definido como uma representação ideal de algum objeto, processo ou local, e tem como função produzir um entendimento simplificação destes. Modelos teóricos são construções hipotéticas, teorizadas, modos de explicação que servem para a análise ou esclarecimento de uma realidade concreta, algo ocorre na natureza. (Japiassu e Marcondes, 1989). 
-
---
-
-Um modelo é bom ou ruim dependendo de sua utilidade (valor de uso), isso é, da possibilidade de previsão (valor preditivo) e similaridade com o fenômeno proposto, quanto melhor seu poder preditivo e sua proximidade com a realidade, melhor o modelo será considerado (Gouveia Jr. 1999). 
+### Conceitos básicos
 
 ---
-# Panomara geral com alguns conceitos básicos para situar. 
+### Panomara geral com conceitos básicos. 
 
-+ __Distribuição geográfica (range)__ :
+### __Modelos __ :
+
+```{r, echo=FALSE, out.width="55%", fig.align='center'}
+knitr::include_graphics("figs/Modelos_1.png")
+```
+
+
+```{r, echo=FALSE}
+## Um modelo pode ser definido como uma representação ideal, processo ou local, e tem como função produzir um entendimento simplificação destes. Modelos teóricos são construções hipotéticas, teorizadas, modos de explicação que servem para a análise ou esclarecimento de uma realidade concreta, algo ocorre na natureza. (Japiassu e Marcondes, 1989). 
+```
+
+---
+### Panomara geral com conceitos básicos.
+
+Um modelo é bom ou ruim dependendo de sua utilidade (valor de uso).
+
+```{r, echo=FALSE, out.width="55%", fig.align='center'}
+knitr::include_graphics("figs/triangulo_models.jpg")
+```
+
+```{r, echo=FALSE}
+## accuracy/realismo (i.e.how well the model reproduces empirical patterns) and precision (i.e. the amount of variation in model predictions among replicates of the model) (Gotelli et al. 2009).
+```
+
+---
+### Panomara geral com conceitos básicos. 
+
+#### __Distribuição geográfica (range)__ :
 Conjunto de regiões, no espaço geográfico, acessíveis para as espécies nas quais ambas condições abióticas e bióticas são favoráveis para a manutenção de populações, e na qual as populações têm condições de se dispersar (Peterson et al. 2011).
 
-
 ---
-# Panomara geral com alguns conceitos básicos para situar. 
+### Conceitos de nicho. Passo fundamental para o uso de modelos de nicho e de distribuição potencial de espécies.
+<br>
+<br>
+<br>
 
-+ __Nicho ecológico__
-O nicho de uma espécie é a descrição conjunta das condições ambientais que permitem à espécie satisfazer seus requerimentos mínimos, de forma que a taxa de natalidade de uma população local seja igual ou maior que a taxa de mortalidade em conjunto com os impactos dos indivíduos desta espécie nas condições ambientais (Chase & Leibold 2003). 
-
---
-
-O conceito de nicho é importante como uma ferramenta para pensar fenômenos ecológicos e evolutivos, assim como um instrumento sintético para integrar estes fenômenos através de níveis de organização (de indivíduos a ecossistemas) e em diferentes escalas.
-
+### Video-aula Luara Tourinho sobre conceitos de nicho.
 
 
 ---
-# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
-
-Video-aula Luara Toruinho sobre concentios de nicho. Pr«oximos slides com conteúdo teórico sobre estes conceitos
-
-
-
----
-# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
+# Conceitos de nicho.
 
 + __Grinnell (1917-1928)__ : A primeira definição de nicho coloca o foco na distribuição das espécies como uma resposta aos locais (habitats) onde os requisitos para uma determinada espécie viver e se reproduzir estão presentes; o nicho como uma unidade espacial. “...unidade de distribuição dentro da qual se encontra cada espécie, em função de suas limitações estruturais e instintivas” (1924).
 
 ---
-# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
+# Conceitos de nicho. 
 
 + __Elton (1927)__ : muda o foco para o papel funcional da espécie em relação ao seu nível trófico; “...o nicho de um animal significa sua posição no ambiente biótico, sua relação com alimento e inimigos” .
 
 
 ---
-# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
+# Conceitos de nicho. 
 
 + __Lotka-Volterra (1925) e Gause (1934)__: adicionaram formalmente a intensidade da competição entre espécies ao conceito de nicho; Competição inter e intraespecifica, Modelo predador-presa (Lotka-Volterra) e princípio da exclusão competitiva (Gause).
 
 
 ---
-# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
+# Conceitos de nicho. 
 
 + __Hutchinson (1944-1958)__ : o termo nicho  definido como “...a soma de todos os fatores ambientais agindo sobre um organismo, uma região de um hiper-espaço n-dimensional…(1944). Um espaço n-dimensional onde cada dimensão representa o intervalo de condições ambientais ou de recursos necessários para a sobrevivência e reprodução da espécie, tais como: temperatura, umidade, salinidade, pH, recursos alimentares, locais para nidificação, intensidade luminosa, pressão predatória, densidade populacional, entre outros. Divididos em:
 
@@ -95,9 +100,23 @@ __nicho fundamental__ da espécie, que inclui os intervalos das condições ambi
 __nicho realizado__ descreve a parte do nicho fundamental no qual a espécie realmente ocorre, ou seja, é delimitado pelos fatores bióticos. 
 
 ---
-# Conceitos de nicho. Passo fundamental para o uso de Modelos de Nicho e de distribuição de espécies.
+# Conceitos de nicho. 
 
 No processo de modelagem de nicho é utilizado APENAS UM SUBESPAÇO do nicho ecológico OCUPADO pela espécie. Portanto, o modelo resultante representa uma aproximação do nicho da espécie e apenas nas dimensões das camadas ambientais utilizadas !
+
+---
+# Conceitos de nicho. 
+
+#### Para introduzir o tema de forma prática, e em termos simples, modelagem de nicho ecológico envolve:
+
+#### - Conceito sobre o que está sendo modelado (conceito de nicho e fatores envolvidos na distribuição geográfica das espécies);
+
+#### - Dados bióticos (registros de ocorrência de espécies);
+
+#### - Dados abióticos (temp, prec, elevação, solo etc);
+
+#### - Algoritmos de modelagem (Maxent, Bioclim, Garp etc).
+
 
 
 ```{r, include=FALSE}
