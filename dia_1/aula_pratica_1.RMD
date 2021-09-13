@@ -60,7 +60,7 @@ knitr::include_graphics("figs/R_GUI.png")
 
 ### Vantagens 
 
-- Open Source. Pode ser usado e modicado para qualquer fim
+- Open Source. Pode ser usado e modificado para qualquer fim
 
 - Pode ser usado em qualquer sistema operacional
 
@@ -100,7 +100,7 @@ Todo comando de git no terminal começa por **git**. Os principais comandos que 
 
 **git commit** : para adicionar arquivos
 
-**git push** :
+**git push** : colocar núvem as alterações 
 
 **git pull** : para baixar para seu computador as atualizaçãoes que estão na núvem (no nosso caso no Github). 
 
@@ -129,7 +129,22 @@ knitr::include_graphics("figs/R_ecology.jpg")
 
 ### E qual relação dessas ferramentas com Modelagem de Nicho Ecólogicos (ENMs) e Distribuição Potencial de Espécies (SDMs) ?
 
-No contexto dos  ENMs/SDMs, existiam e existem outros tipos softwares (interface gráfica) para gerar tais modelos (openmodeler, modeco, maxent , diva gis). No entanto, é crescente a discussão que envolve a reprodutibilidade  das análises estatísticas em geral, e essa vem se tornando uma cobrança cada vez maior para análises de ENMs / SDMs também,  uma vez que estas podem envolver muitos passos (Referencias). É neste contexto que o uso de linguagem de programação, R principalmente, se tornou popular. O R possui um ecossistema que incentiva a reprodutibilidade, garantindo que qualquer resultado, da conta mais simples ao modelo mais complexo, possa ser reproduzido do começo ao fim.
+```{r, echo=FALSE, out.width="60%", fig.align='center'}
+knitr::include_graphics("figs/reprodu_1.png")
+```
+
+```{r, echo=FALSE}
+# No contexto dos  ENMs/SDMs, existiam e existem outros tipos softwares (interface gráfica) para gerar tais modelos (openmodeler, modeco, maxent , diva gis). No entanto, é crescente a discussão que envolve a reprodutibilidade  das análises estatísticas em geral, e essa vem se tornando uma cobrança cada vez maior para análises de ENMs / SDMs também,  uma vez que estas podem envolver muitos passos (Referencias). É neste contexto que o uso de linguagem de programação, R principalmente, se tornou popular. O R possui um ecossistema que incentiva a reprodutibilidade, garantindo que qualquer resultado, da conta mais simples ao modelo mais complexo, possa ser reproduzido do começo ao fim.
+```
+
+---
+# Parte 1 
+
+### E qual relação dessas ferramentas com Modelagem de Nicho Ecólogicos (ENMs) e Distribuição Potencial de Espécies (SDMs) ?
+
+```{r, echo=FALSE, out.width="60%", fig.align='center'}
+knitr::include_graphics("figs/reprodu_2.png")
+```
 ---
 # Parte 1 
 
@@ -288,11 +303,22 @@ knitr::include_graphics("figs/Seetings_Github.png")
 ]
 
 .pull-right[
-```{r, echo=FALSE, out.width="100%", fig.align='center'}
-knitr::include_graphics("figs/Key_3.png")
+
+```{r, echo=FALSE, out.width="70%", fig.align='left'}
+knitr::include_graphics("figs/gpg_keys.png")
 ```
 ]
+---
+# Parte 2 
+
+### Configurando o Github com Rstudio. 
+Para copiar no GitHub, vá até o canto superior direito da sua página inicial do Perfil e selecione a opção **Settings**, em seguida vá na opção **SSH and GPG Keys** para colar e adicionar a chave. 
+
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
+knitr::include_graphics("figs/Key_3.png")
+```
 #### Tudo configurado! Agora Git, github e seu computador podem se comunicar. O próximo passo é criar o repositório do projeto da disciplina. Vamos lá?
+
 ---
 # Parte 3 
 
@@ -402,7 +428,6 @@ Vamos criar um script de teste. Vá no no seguinte ícone clique R script
 
 #### Testando o controle de versão para nossos scripts R
 
-
 Digite **Teste** no seu arquivo R que até agora esta em branco. Em seguida salve este script (clicando noícone do disquete) com o nome "Teste" na pasta **R**, salvaremos todos os script R nesta pasta.  
  
 ```{r, echo=FALSE, out.width="35%", fig.align='center'}
@@ -415,6 +440,8 @@ knitr::include_graphics("figs/disqute_save.jpg")
 
 #### Testando o controle de versão para nossos scripts R
 
+Vá para aba Git e clique na opção R/
+
 ```{r, echo=FALSE, out.width="65%", fig.align='center'}
 knitr::include_graphics("figs/Git_script_1.png")
 ```
@@ -425,6 +452,8 @@ knitr::include_graphics("figs/Git_script_1.png")
 
 #### Testando o controle de versão para nossos scripts R
 
+Clique em Diff 
+
 ```{r, echo=FALSE, out.width="65%", fig.align='center'}
 knitr::include_graphics("figs/Git_script_2.png")
 ```
@@ -434,6 +463,8 @@ knitr::include_graphics("figs/Git_script_2.png")
 ### Organização dos projetos
 
 #### Testando o controle de versão para nossos scripts R
+
+Adicione uma mensagem informativa e clique em Commite seguida em push.
 
 ```{r, echo=FALSE, out.width="65%", fig.align='center'}
 knitr::include_graphics("figs/Git_script_3.png")
@@ -464,16 +495,21 @@ knitr::include_graphics("figs/Push.png")
 ### Organização dos projetos
 
 #### Testando o controle de versão para nossos scripts R
+Talvez o git/rstudio peça suas credenciais (adicione o nome de usário e senha que foram cadastradas aqui e no Github)  
 
-```{r, echo=FALSE, out.width="65%", fig.align='center'}
+```{r, echo=FALSE, out.width="40%", fig.align='center'}
 knitr::include_graphics("figs/Push_2.png")
 ```
+Depois de dar Push, vá ate o Github e veja que seu script agora está lá. 
+
 ---
 # Parte 4 
 
 ### Organização dos projetos
 
 #### Testando o controle de versão para nossos scripts R
+
+Adione qualquer texto ao seu script Teste e salve as alterações. 
 
 ```{r, echo=FALSE, out.width="75%", fig.align='center'}
 knitr::include_graphics("figs/git_github_test.png")
@@ -491,6 +527,15 @@ knitr::include_graphics("figs/git_opts_rstudio.png")
 knitr::include_graphics("figs/git-github_test_2.png")
 ```
 ---
+# Parte 4 
+
+### Organização dos projetos
+Repita os passos anteriores clicando em Diff, adicionando uma mensagem informativa e em seguida clicar em Commit e finalizar clicando em Push
+
+```{r, echo=FALSE, out.width="55%", fig.align='center'}
+knitr::include_graphics("figs/git-github_test_2.png")
+```
+---
 <br>
 <br>
 <br>
@@ -498,7 +543,3 @@ knitr::include_graphics("figs/git-github_test_2.png")
 <br>
 
 # Fim da prática !
-
-```{r, echo=FALSE, out.width="55%", fig.align='center'}
-knitr::include_graphics("figs/git-github_test_2.png")
-```
