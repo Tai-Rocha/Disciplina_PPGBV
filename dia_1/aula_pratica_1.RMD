@@ -1,7 +1,7 @@
 ---
-title: "Aula prática dia 1: Introdução ao ambiente R e boas práticas. Organização de projetos com R e R studio usando Git e Github."
+title: "Aula prática dia 1: Introdução ao ambiente R e boas práticas. Organização de projetos com R e RStudio usando Git e Github."
 author: "Tainá Rocha"
-date: "2019/06/17 (updated: `r Sys.Date()`)"
+date: "2021/09/08 (updated: `r Sys.Date()`)"
 output: 
   xaringan::moon_reader:
     lib_dir: libs
@@ -29,7 +29,7 @@ mono_light(
 )
 ```
 
-## A prática esta dividida em 3 momentos 
+## A prática é dividida em 4 momentos 
 
 ### - Parte 1 : Definições básicas sobre as ferramentas que usaremos 
 
@@ -82,7 +82,7 @@ knitr::include_graphics("figs/R_GUI.png")
 ---
 # Parte 1 
 
-## Rstudio
+## RStudio
 Uma interface gráfica para R. 
 
 ```{r, echo=FALSE, out.width="70%", fig.align='center'}
@@ -121,15 +121,16 @@ GitHub é um serviço baseado em nuvem que hospeda os arquivos que usam Git como
 
 A popularização do uso da linguagem R, principalmente na ecologia é relativamente recente. Veja este gráfico de Lai et al. 2019 do artigo "Evaluating the popularity of R in ecology"
 
-```{r, echo=FALSE, out.width="60%", fig.align='center'}
+```{r, echo=FALSE,  out.width="350", out.height= "250", fig.align='center'}
 knitr::include_graphics("figs/R_ecology.jpg")
 ```
+
 ---
 # Parte 1 
 
-### E qual relação dessas ferramentas com Modelagem de Nicho Ecólogicos (ENMs) e Distribuição Potencial de Espécies (SDMs) ?
+#### E qual relação dessas ferramentas com Modelagem de Nicho Ecólogicos (ENMs) e Distribuição Potencial de Espécies (SDMs) ?
 
-```{r, echo=FALSE, out.width="60%", fig.align='center'}
+```{r, echo=FALSE, out.width="350", out.height= "300", fig.align='center'}
 knitr::include_graphics("figs/reprodu_1.png")
 ```
 
@@ -150,22 +151,22 @@ knitr::include_graphics("figs/reprodu_2.png")
 
 ### E qual relação dessas ferramentas com Modelagem de Nicho Ecólogicos (ENMs) e Distribuição Potencial de Espécies (SDMs) ?
 
-Você pode fazer suas análises através de códigos com R, bem como fazer alterações nesses códigos, que ficam registrados por históricos de alteraçõe com Git, deixando tudo isso hospedado em nuvem no Github (onde outros usuários ainda podem contribuir para melhorar seu código). Usando essas ferramentas integradas e da maneira correta e uma boa prática que garante maior reprodutibilidade de suas análises.  
+Você pode fazer suas análises através de códigos R, registrando todas alterações nesses códigos. Seus códigos e histórico de alterações podem ser hospedado pelo Github. Usar essas ferramentas integradas e da maneira correta é uma boa prática que garante maior reprodutibilidade de suas análises e facilita trabalhos feitos em equipe quando mais de uma pessoa trabalha no mesmo código.   
 ---
 
 # Parte 1 
 
 ### Vamos ao que interessa!
 
-#### Essa é uma discplina de teoria e prática de ENMs e SDMs, portanto o objetivo maior é entender a teoria e conseguir gerar seus modelos. Usaremos pacotes de R no Rstudio para gerar os modelos.
+#### Essa é uma disciplina de teoria e prática de ENMs e SDMs, portanto o objetivo maior é entender a teoria e conseguir gerar seus modelos. Usaremos pacotes de R no Rstudio para gerar esses modelos.
 
-#### Em casos de imprevisto , também temos um plano B*
+#### Em casos de imprevistos, também temos um plano B. Então, não se preocupem!
 ---
 # Parte 2 
 
 ### Um checklist de instalações.  
 
-Pedimos a instalação do R, Rstudio e Qgis como pré-requisitos, uma vez que público de pós-graduação no geral já usa/usou essas ferramentas. Se não for o caso, nos links a seguir existem instruções para essas instalações:
+Pedimos a instalação do R, Rstudio e Qgis como pré-requisitos, uma vez que o público de pós-graduação no geral já usa/usou essas ferramentas. Se não for o caso, nos links a seguir existem instruções para essas instalações:
 
 ### R
 É possível encontrar as instruçoes de instalação de acordo com seu sistema operacional (Linux, Mac ou Windows) no link abaixo:<br>
@@ -183,9 +184,9 @@ Obs1.: No geral, instalação de R no windows requer a instalação do Rtools <b
 ---
 # Parte 2 
 
-### Rstudio
+### RStudio
 
-Escolha a opção **R Studio para desktop** e de acordo com seu sistema operacional. Link para instalação:<br>
+Escolha a opção **RStudio para desktop** e de acordo com seu sistema operacional. Link para instalação:<br>
 <br>
 <br>
 **https://www.rstudio.com/products/rstudio/download/**  
@@ -198,7 +199,7 @@ Escolha a opção de download para seu sistema operacional e siga as instruçõe
 <br>
 **https://git-scm.com/downloads** 
 
-```{r, echo=FALSE, out.width="55%", fig.align='center'}
+```{r, echo=FALSE, out.width="250", out.height= "200", fig.align='center'}
 knitr::include_graphics("figs/download_git.png")
 ```
 ---
@@ -209,7 +210,7 @@ knitr::include_graphics("figs/download_git.png")
 
 Crie sua conta no Github pelo link **https://github.com/**  e caso não tenha uma conta clique e **Create an account**, destacado em azul
 
-```{r, echo=FALSE, out.width="45%", fig.align='center'}
+```{r, echo=FALSE, out.width="200", out.height= "200", fig.align='center'}
 knitr::include_graphics("figs/Github_conta.png")
 ```
 ---
@@ -217,7 +218,7 @@ knitr::include_graphics("figs/Github_conta.png")
 
 ### Github  
 
-Preencha os campos necessários e cclqie em **Create account**
+Preencha os campos necessários e clique em **Create account**
 
 ```{r, echo=FALSE, out.width="35%", fig.align='center'}
 knitr::include_graphics("figs/Github_2.png")
@@ -229,7 +230,7 @@ knitr::include_graphics("figs/Github_2.png")
 ### Configuração Git. Para configurar seu Git existem duas possibilidades. 
 
 #### Configurando pelo Terminal: 
-No Rstudio procure pela aba **Terminal** ou abra seu próprio terminal (conhecido por Prompt no Windows).
+No RStudio procure pela aba **Terminal** ou abra seu próprio terminal (conhecido por Prompt no Windows).
 
 ```{r, echo=FALSE, out.width="35%", fig.align='center'}
 knitr::include_graphics("figs/Terminal.png")
@@ -263,70 +264,75 @@ Em seguinda use a função **use_git_config**
 ---
 # Parte 2 
 
-### Configurando o Github com Rstudio. 
-VOCÊ SÓ PRECISA FAZER ISTO UMA VEZ EM CADA COMPUTADOR. Vamos gera uma chave de segurança que identifica o computador e copiamos ela no GitHub. Esta chave é para cada computador individual. Você pode ter uma conta de GitHub e trabalhar em diferentes computadores, e cada um terá a própria chave.
+### Configurando o Github com RStudio. 
+VOCÊ SÓ PRECISA FAZER ISTO UMA VEZ EM CADA COMPUTADOR. Vamos gera uma chave de segurança (que identifica o computador) e copiar para o GitHub. Esta chave é para cada computador individual. Você pode ter uma conta de GitHub e trabalhar em diferentes computadores, e cada um terá a própria chave
 
-No R studio, vá até **Global option...** (Opçoes globais) 
+No RStudio, vá até **Global option...** (Opções globais) 
 ```{r, echo=FALSE, out.width="65%", fig.align='center'}
 knitr::include_graphics("figs/global_options.jpg")
 ```
 ---
 # Parte 2 
 
-### Configurando o Github com Rstudio. 
+### Configurando o Github com RStudio. 
 
-Na opção  **Git/SVN** cheque se git está apontando para um arquivo **git.exe** em windows, em mac e linux **/usr/bin/git** ou **/usr/bin/gnome-terminal**  . Se você nunca fez isto, não deve ter nada no campo da chave RSA, clique Criar RSA Key (Create). O preenchimentos do campos que aparecem é opcional 
+Na opção  **Git/SVN** cheque se git está apontando para um arquivo **git.exe** em windows. Mac ou linux devem ter algo como  **/usr/bin/git** ou **/usr/bin/gnome-terminal** . Se você nunca fez isto, não deve ter nada no campo da chave RSA, clique em "Criar RSA Key (Create)". O preenchimento dos campos que aparecem é opcional 
 
-```{r, echo=FALSE, out.width="40%", fig.align='center'}
+```{r, echo=FALSE, out.width="250", out.height= "200", fig.align='center'}
 knitr::include_graphics("figs/Key_1.png")
 ```
 ---
 # Parte 2 
 
-### Configurando o Github com Rstudio. 
-Em seguida clique em **View public key** destacado em azul. Copie a RSA Key. Ela é a chave que identifica seu computador. 
-```{r, echo=FALSE, out.width="45%", fig.align='center'}
+### Configurando o Github com RStudio. 
+Em seguida clique em **View public key** destacado em azul. Copie a RSA Key. Ela é a chave que identifica seu computador
+
+```{r, echo=FALSE, out.width="300", out.height= "250", fig.align='center'}
 knitr::include_graphics("figs/Key_2.png")
 ```
 ---
 
 --- 
-# Parte 2 
+## Parte 2 
 
-### Configurando o Github com Rstudio. 
-Para copiar no GitHub, vá até o canto superior direito da sua página inicial do Perfil e selecione a opção **Settings**, em seguida vá na opção **SSH and GPG Keys** para colar e adicionar a chave. 
+### Configurando o Github com RStudio. 
+Para copiar no GitHub, vá até o canto superior direito da sua página inicial do Perfil e selecione a opção **Settings**
 
-.pull-left[
-```{r, echo=FALSE, out.width="30%", fig.align='left'}
+```{r, echo=FALSE, out.width= "300", out.height= "350", fig.align='center'}
 knitr::include_graphics("figs/Seetings_Github.png")
 ```
-]
+---
+## Parte 2 
 
-.pull-right[
+### Configurando o Github com RStudio. 
 
-```{r, echo=FALSE, out.width="70%", fig.align='left'}
+Em seguida vá na opção **SSH and GPG Keys**  
+
+```{r, echo=FALSE, out.width="250", out.height= "300", fig.align='center'}
 knitr::include_graphics("figs/gpg_keys.png")
 ```
-]
+
 ---
 # Parte 2 
 
-### Configurando o Github com Rstudio. 
-Para copiar no GitHub, vá até o canto superior direito da sua página inicial do Perfil e selecione a opção **Settings**, em seguida vá na opção **SSH and GPG Keys** para colar e adicionar a chave. 
+### Configurando o Github com RStudio. 
 
-```{r, echo=FALSE, out.width="50%", fig.align='center'}
+Cole e adicione a chave
+
+```{r, echo=FALSE, out.width="60%", fig.align='center'}
 knitr::include_graphics("figs/Key_3.png")
 ```
-#### Tudo configurado! Agora Git, github e seu computador podem se comunicar. O próximo passo é criar o repositório do projeto da disciplina. Vamos lá?
+
+#### Tudo configurado! Agora R, RStudio, Git e Github podem se comunicar. O próximo passo é criar o repositório do projeto da disciplina. Vamos lá?
 
 ---
 # Parte 3 
 
 ### Criando o repositório do projeto da disciplina 
 
-No canto superior direito na sua conta do Github, clique no  **+** , em seguida em New repository
+No canto superior direito na sua conta do Github, clique no  **+** , em seguida em "New repository"
 
-```{r, echo=FALSE, out.width="50%", fig.align='center'}
+```{r, echo=FALSE, out.width="300", out.height= "300", fig.align='center'}
 knitr::include_graphics("figs/Create_new_repo.png")
 ```
 ---
@@ -334,9 +340,9 @@ knitr::include_graphics("figs/Create_new_repo.png")
 
 ### Criando o repositório do projeto da disciplina 
 
-Nomei de forma informativa seu repositório, crie uma descrição igualmente informativa. Salecione a opção **Public** e opção **Add Readme** . Fialize clicando em **Create repository **
+Adicione um nome informativo para seu repositório, crie uma descrição igualmente informativa. Salecione a opção **Public** e opção **Add Readme** . Finalize clicando em **Create repository **
 
-```{r, echo=FALSE, out.width="35%", fig.align='center'}
+```{r, echo=FALSE, out.width="25%", fig.align='center'}
 knitr::include_graphics("figs/repo_1.png")
 ```
 
@@ -347,7 +353,7 @@ knitr::include_graphics("figs/repo_1.png")
 
 Já no seu repositório , clique na opção **Code** e copie caminho HTTPS
 
-```{r, echo=FALSE, out.width="100%", fig.align='center'}
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
 knitr::include_graphics("figs/repo_to_rstudio.png")
 ```
 ---
@@ -355,9 +361,9 @@ knitr::include_graphics("figs/repo_to_rstudio.png")
 
 ### Criando o repositório do projeto da disciplina
 
-No Rstudio vá em **File**, em seguida **New project**
+No RStudio vá em **File**, em seguida **New project**
 
-```{r, echo=FALSE, out.width="30%", fig.align='center'}
+```{r, echo=FALSE, out.width="300", out.height= "300", fig.align='center'}
 knitr::include_graphics("figs/new_project.jpg")
 ```
 ---
@@ -365,13 +371,19 @@ knitr::include_graphics("figs/new_project.jpg")
 
 ### Criando o repositório do projeto da disciplina 
 
-5- Selecione a opção **Version control** e seguida a opção **Git**
+Selecione a opção **Version control** 
 
-```{r, echo=FALSE, out.width="30%", fig.align='left'}
+```{r, echo=FALSE, out.width="250", out.height= "350", fig.align='center'}
 knitr::include_graphics("figs/versio_control.png")
 ```
+---
+# Parte 3 
 
-```{r, echo=FALSE, out.width="35%", fig.align='right'}
+### Criando o repositório do projeto da disciplina 
+
+Selecione a opção **Git**
+
+```{r, echo=FALSE, out.width="250", out.height= "350", fig.align='center'}
 knitr::include_graphics("figs/Git.png")
 ```
 ---
@@ -379,7 +391,7 @@ knitr::include_graphics("figs/Git.png")
 
 ### Criando o repositório do projeto da disciplina 
 
-Indique o caminho onde seu projeto/repositório ficara salvo
+Indique o caminho onde seu projeto/repositório ficará salvo
 
 ```{r, echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("figs/projeto_1.png")
@@ -391,7 +403,7 @@ Para terminar clique em **Create Project**
 
 ### Criando o repositório do projeto da disciplina 
 
-Ao criar seu projeto desta forma, no seu Rstudio deve surgir uma aba chamada Git. E por onde vamos realizar o controle de versão (histórico de alterações dos nossos scritps)
+Ao criar seu projeto desta forma, no seu RStudio deve surgir uma aba chamada Git. É por onde vamos realizar o controle de versão (histórico de alterações dos nossos scritps)
 
 ```{r, echo=FALSE, out.width="80%", fig.align='center'}
 knitr::include_graphics("figs/proj_rstudio.png")
@@ -402,35 +414,35 @@ knitr::include_graphics("figs/proj_rstudio.png")
 
 ### Organização dos projetos
 
-Vamos criar uma estrutura de pastas para seu projeto. Isso facilitará o gereciamento do projeto. Análises de ENMs/SDMs envolvem muitos e diferentes tipos de arquivos (é fácil se perder se não houver essa organização).
+Vamos criar uma estrutura de pastas para seu projeto. Isso facilitará o gerenciamento do projeto. Análises de ENMs/SDMs envolvem diferentes tipos de arquivos (é fácil se perder se não houver essa organização).
 
 ```{r, echo=FALSE, out.width="35%", fig.align='center'}
 knitr::include_graphics("figs/pastas_subpastas.png")
 ```
 
-Uma estrutra simples envolve basicamente pastas para os dados, para os scripts, para os resultados, para documetos gerais (.doc, .pdf, .ppt) e para figuras. Dentro destas podem existem outras subpastas. A melhor organização fica a seu critério. 
+Uma estrutra simples envolve basicamente pastas para os dados, para os scripts, para os resultados, para documetos gerais (.doc, .pdf, .ppt) e para figuras. Dentro destas podem existir outras subpastas. A melhor organização fica a seu critério. 
 ---
 
 # Parte 4 
 
 ### Organização dos projetos
 
-#### Testando o controle de versão para nossos scripts R
+#### Testando o controle de versão para um script R
 
+Vamos criar um script de teste. Vá no ícone "New file" e clique em "R script"
 
-Vamos criar um script de teste. Vá no no seguinte ícone clique R script
-
-
----
-# Parte 4 
-
-### Organização dos projetos
-
-#### Testando o controle de versão para nossos scripts R
-
-Digite **Teste** no seu arquivo R que até agora esta em branco. Em seguida salve este script (clicando noícone do disquete) com o nome "Teste" na pasta **R**, salvaremos todos os script R nesta pasta.  
- 
 ```{r, echo=FALSE, out.width="35%", fig.align='center'}
+knitr::include_graphics("figs/R_script_1.png")
+```
+
+---
+### Parte 4 
+
+### Organização dos projetos
+
+Digite **Teste** no seu arquivo R que até agora está em branco. Em seguida salve este script (clicando no ícone do disquete) com o nome "Teste" na pasta **R**. Salvaremos todos os scripts R nesta pasta.  
+ 
+```{r, echo=FALSE, out.width="200", out.height= "350", fig.align='center'}
 knitr::include_graphics("figs/disqute_save.jpg")
 ```
 ---
@@ -438,23 +450,23 @@ knitr::include_graphics("figs/disqute_save.jpg")
 
 ### Organização dos projetos
 
-#### Testando o controle de versão para nossos scripts R
+#### Testando o controle de versão para um script R
 
-Vá para aba Git e clique na opção R/
+Vá para aba Git e clique em **R/** (Essa pasta subirá junto com seu script para o Github)
 
 ```{r, echo=FALSE, out.width="65%", fig.align='center'}
 knitr::include_graphics("figs/Git_script_1.png")
 ```
 ---
-# Parte 4 
+## Parte 4 
 
 ### Organização dos projetos
 
-#### Testando o controle de versão para nossos scripts R
+#### Testando o controle de versão para um script R
 
-Clique em Diff 
+Após clicar em **R/**, o Git sinaliza que este arquivo foi adicionado (<span style="color:green">A</span>).
 
-```{r, echo=FALSE, out.width="65%", fig.align='center'}
+```{r, echo=FALSE, out.width="400", out.height= "200", fig.align='center'}
 knitr::include_graphics("figs/Git_script_2.png")
 ```
 ---
@@ -462,31 +474,47 @@ knitr::include_graphics("figs/Git_script_2.png")
 
 ### Organização dos projetos
 
-#### Testando o controle de versão para nossos scripts R
+#### Testando o controle de versão para um script R
 
-Adicione uma mensagem informativa e clique em Commite seguida em push.
+O Git reconhece as seguintes ações:
 
-```{r, echo=FALSE, out.width="65%", fig.align='center'}
+```{r, echo=FALSE, out.width="15%", fig.align='center'}
+knitr::include_graphics("figs/git_opts_rstudio.png")
+```
+---
+## Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para um script R
+
+Clique em **Diff **
+
+```{r, echo=FALSE, out.width="400", out.height= "200", fig.align='center'}
+knitr::include_graphics("figs/Git_script_2.png")
+```
+---
+## Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para um script R
+
+Adicione uma mensagem informativa e clique em "Commit" e em seguida "Push".
+
+```{r, echo=FALSE, out.width="250", out.height= "150", fig.align='center'}
 knitr::include_graphics("figs/Git_script_3.png")
 ```
 ---
-# Parte 4 
+## Parte 4 
 
 ### Organização dos projetos
 
-#### Testando o controle de versão para nossos scripts R
+#### Testando o controle de versão para um script R
+Talvez o git/rstudio peça suas credenciais (adicione o nome de usário e senha que foram cadastradas aqui e no Github) 
 
-```{r, echo=FALSE, out.width="65%", fig.align='center'}
-knitr::include_graphics("figs/Git_script_4.png")
-```
----
-# Parte 4 
-
-### Organização dos projetos
-
-#### Testando o controle de versão para nossos scripts R
-
-```{r, echo=FALSE, out.width="65%", fig.align='center'}
+Usuário: 
+```{r, echo=FALSE, out.width="250", out.height= "150", fig.align='center'}
 knitr::include_graphics("figs/Push.png")
 ```
 ---
@@ -494,22 +522,34 @@ knitr::include_graphics("figs/Push.png")
 
 ### Organização dos projetos
 
-#### Testando o controle de versão para nossos scripts R
-Talvez o git/rstudio peça suas credenciais (adicione o nome de usário e senha que foram cadastradas aqui e no Github)  
+#### Testando o controle de versão para um script R
+
+Senha:
 
 ```{r, echo=FALSE, out.width="40%", fig.align='center'}
 knitr::include_graphics("figs/Push_2.png")
 ```
-Depois de dar Push, vá ate o Github e veja que seu script agora está lá. 
-
 ---
 # Parte 4 
 
 ### Organização dos projetos
 
-#### Testando o controle de versão para nossos scripts R
+#### Testando o controle de versão para um script R
 
-Adione qualquer texto ao seu script Teste e salve as alterações. 
+Ao finalizar a seguinte mensagem informará quais modificações subiram para o Github.
+```{r, echo=FALSE, out.width="350", out.height= "250", fig.align='center'}
+knitr::include_graphics("figs/Git_script_4.png")
+```
+
+Vá até o Github e veja que seu script agora está lá. 
+---
+# Parte 4 
+
+### Organização dos projetos
+
+#### Testando o controle de versão para um script R
+
+Adicione qualquer texto ao seu script Teste e salve as alterações. 
 
 ```{r, echo=FALSE, out.width="75%", fig.align='center'}
 knitr::include_graphics("figs/git_github_test.png")
@@ -519,18 +559,7 @@ knitr::include_graphics("figs/git_github_test.png")
 
 ### Organização dos projetos
 
-```{r, echo=FALSE, out.width="15%", fig.align='center'}
-knitr::include_graphics("figs/git_opts_rstudio.png")
-```
-
-```{r, echo=FALSE, out.width="55%", fig.align='center'}
-knitr::include_graphics("figs/git-github_test_2.png")
-```
----
-# Parte 4 
-
-### Organização dos projetos
-Repita os passos anteriores clicando em Diff, adicionando uma mensagem informativa e em seguida clicar em Commit e finalizar clicando em Push
+Veja que o Git sinaliza que seu arquivo foi modificado. Clique no <span style="color:blue">M</span> . Em seguida repita os passos anteriores clicando em Diff, adicionando uma mensagem informativa e em seguida clicar em Commit e finalizar clicando em Push
 
 ```{r, echo=FALSE, out.width="55%", fig.align='center'}
 knitr::include_graphics("figs/git-github_test_2.png")
@@ -538,8 +567,14 @@ knitr::include_graphics("figs/git-github_test_2.png")
 ---
 <br>
 <br>
-<br>
-<br>
-<br>
+## Fim da prática !
+### Pronto, agora você pode trabalhar em seus scripts fazendo controle de versão!
 
-# Fim da prática !
+```{r, echo=FALSE, out.width="450", out.height= "300", fig.align='center'}
+knitr::include_graphics("figs/Fig_final.jpeg")
+```
+
+
+```{r, include=FALSE}
+pagedown::chrome_print("aula_pratica_1.html",output="aula_pratica_1.pdf")
+```

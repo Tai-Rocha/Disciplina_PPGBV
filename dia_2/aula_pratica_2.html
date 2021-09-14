@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Aula pratica 2: Coleta e limpeza de dados bióticos (ocorrncias georreferenciadas) e abióticos (variáveis ambientais)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Tainá Rocha" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Aula pratica 2: Coleta e limpeza de dados bióticos (ocorrncias georreferenciadas) e abióticos (variáveis ambientais)
+### Tainá Rocha
+### 2019/06/17 (updated: 2021-09-10)
+
+---
+
+class: middle, center
+
+
+
+
+
+### SpeciesLink
+
+- Acesse a base pelo link https://specieslink.net/
+ 
+&lt;img src="figs/specieslink_0.png" width="80%" style="display: block; margin: auto;" /&gt;
+---
+### SpeciesLink
+
+- Faça o login (ou crie sua conta para conseuir baixar os dados)
+
+&lt;img src="figs/specieslink_1.png" width="80%" style="display: block; margin: auto;" /&gt;
+---
+### SpeciesLink
+
+- Após fazer o login, selecione a opção "busca" na página inicial para ser direcionado para seguinte página:
+
+&lt;img src="figs/specieslink_2.png" width="70%" style="display: block; margin: auto;" /&gt;
+- A busca foi realizada para a espécies *Leandra carassana* no campo "Nome científico", no último campo "coordenadas geográficas", selecionamos as opções "originais" e "consistentes". Após preencher os campos clique em "buscar registros"
+---
+### SpeciesLink
+
+- Na página seguinte, selecionamos a opção "baixar" 
+
+&lt;img src="figs/specieslink_3.png" width="70%" style="display: block; margin: auto;" /&gt;
+---
+### SpeciesLink
+
+- Na página seguinte no campo "formato de arquivo" selecionamos a opção "texto separado por tab" e em "conjunto de pontos" a opção "todos os campos". Finalize selecionando a opção "confirmar"
+
+&lt;img src="figs/specieslink_4.png" width="60%" style="display: block; margin: auto;" /&gt;
+---
+### SpeciesLink
+- A planilha será enviada para seu email. 
+
+&lt;img src="figs/specieslink_5.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+- A planilha dessa prática esta salva no caminho: *"projeto_1/dado/ocorrencias/raw/speciesLink-20210909210259-0006008.txt"*
+---
+
+#### A busca no GBIF e outras bases não é tão diferente.
+
+#```{r, include=FALSE}
+#pagedown::chrome_print("aula_teoria_1.html",output="aula_teoria_1.pdf")
+#```
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "20:10"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
