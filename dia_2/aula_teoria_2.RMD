@@ -81,7 +81,7 @@ knitr::include_graphics("figs/vies_amostral.png")
 #### Ou, se não houver diferença significativa entre esses valores, alguns autores optam por apresentar o resultado da modelagem como uma soma, ou intersecção, ou ainda uma média entre os resultados de diferentes algoritmos, a partir de um determinado limiar de corte. Esta técnica é utilizada para dar maior robustez ao resultado apresentado (técnica “ensemble” ou de consenso entre algoritmos).
 ---
 
-#```{r, include=FALSE}
-#pagedown::chrome_print("aula_teoria_1.html",output="aula_teoria_1.pdf")
-#```
+```{r, include=FALSE}
+pagedown::chrome_print("aula_teoria_2.html",output="aula_teoria_2.pdf")
+```
 
