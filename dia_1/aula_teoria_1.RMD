@@ -117,6 +117,12 @@ No processo de modelagem de nicho é utilizado APENAS UM SUBESPAÇO do nicho eco
 
 #### - Algoritmos de modelagem (Maxent, Bioclim, Garp etc).
 
+---
+#### Em outras palavras, modelagem de nicho ecológico envolve:
+
+```{r, echo=FALSE, out.width="950", out.height= "450", fig.align='center'}
+knitr::include_graphics("figs/algo_G_space.png")
+```
 
 
 ```{r, include=FALSE}
